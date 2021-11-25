@@ -1,0 +1,24 @@
+//  COLORS //
+$primaryColor: hsl(0, 0%, 100%);
+$backgroundColor: hsl(240, 67%, 8%);
+$heading: hsl(240, 17%, 26%);
+$subHeading: hsl(240, 6%, 54%);
+$mercury: hsl(194, 48%, 49%);
+$earth: hsl(263, 67%, 51%);
+$mars: hsl(13, 63%, 51%);
+$jupiter: hsl(2, 68%, 53%);
+$saturn: hsl(17, 73%, 46%);
+$uranus: hsl(169, 73%, 44%);
+$venus: hsl(33,82%, 61%);
+$neptune: hsl(222, 87%, 56%);
+
+// FONT FAMILES //
+$primaryFont:'Antonio', sans-serif;
+$secondaryFont:'Spartan', sans-serif;
+
+// TRANSITION VARIABLES //
+$primaryTransition: all .8s ease-in-out;
+
+
+// COMPONENT RELATED VARIABLES //
+$navHeight: 4rem;

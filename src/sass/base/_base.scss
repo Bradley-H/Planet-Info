@@ -1,0 +1,58 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html, #svelte{
+  max-height: 100%;
+}
+
+html{
+  background-image: url("./assets/background-stars.svg");
+  background-color: $backgroundColor;
+  object-fit: cover;
+  @include desktop{
+    overflow: hidden;
+  }
+}
+
+button{
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+
+
+body{
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  font-weight: 400;
+  height: 100%;
+  width: 100%;
+  color: white;
+}
+
+p, a, h3, h4, body, button{
+  font-family: $secondaryFont;
+}
+
+h1,h2,h3,h4, button{
+  font-weight: bold;
+}
+
+h1,h2{
+  font-family: $primaryFont;
+}
+
+// EACH HEADING GIVIN A PX TO REM VALUE TO REDUCE REPEATED CODE // ex: h1: toRem(33)
+$Headings: ("h1": 35, "h2": 25, "h3": 17, "h4": 14);
+
+@each $heading, $value in $Headings {
+  #{$heading}{
+    font-size: toRem($value);
+  }
+}
