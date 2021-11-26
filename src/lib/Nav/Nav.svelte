@@ -5,7 +5,7 @@
     // SASS  //
     import "../../sass/styles.scss";
 
-    let planets = [
+    let planets: { id: number, name: string}[] = [
         {id: 0, name: "Mercury"},
         {id: 1, name: "Venus"},
         {id: 2, name: "Earth"},
@@ -24,7 +24,7 @@
         @include centered;
         background-color: $backgroundColor;
         background-image: url("/assets/background-stars.svg");
-        width: 100%;
+        @extend %width-100;
         border-bottom: 1px solid $subHeading;
         overflow: hidden;
         height: $navHeight;

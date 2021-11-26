@@ -1,3 +1,6 @@
+import { derived } from 'svelte/store';
+import {globalStore} from './globalStore'
+
 export async function getData(path){
     const res = await fetch('./json/data.json')
     const data = await res.json();
@@ -10,3 +13,4 @@ export async function getData(path){
         return data;
     }
 }
+

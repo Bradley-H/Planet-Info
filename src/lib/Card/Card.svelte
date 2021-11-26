@@ -11,7 +11,7 @@
 
     .title, .content{
         text-align: center;
-        width: 100%;
+        @extend %width-100;
     }
 
     .card{

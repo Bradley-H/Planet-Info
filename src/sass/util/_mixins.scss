@@ -2,24 +2,24 @@
     display: flex;
     justify-content: center;
     align-items: center;
-}
+};
 
 
-@mixin tablet{
-    @media (min-width: ($mobile + 1) ) and (max-width: $tablet) {
+@mixin tablet {
+    @media (min-width: ($mobile + 1)) and (max-width: $tablet) {
         @content
-    }        
-    };
+    }
+};
 
-    @mixin tabletUp {
-        @media (min-width: ($mobile + 1)) {
-            @content;
+@mixin tabletUp {
+    @media (min-width: ($mobile + 1)) {
+        @content;
     }
 };
 
 
-    @mixin desktop{
-        @media (min-width: ($tablet + 1) ){
-            @content
-        }
-    };
+@mixin desktop {
+    @media (min-width: ($tablet + 1)) {
+        @content
+    }
+};

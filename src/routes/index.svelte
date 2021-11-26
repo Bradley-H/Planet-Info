@@ -1,15 +1,17 @@
 <script lang="ts">
     // SVELTE IMPORTS //
     import { fly, fade } from "svelte/transition";
+
     // COMPONENTS //
     import Button from "$lib/Button/Button.svelte";
     import Card from "$lib/Card/Card.svelte";
     // STORES //
     import { globalStore } from "../stores/globalStore";
-import { getData } from "../stores/functionStore";
+    import { getData } from "../stores/functionStore";
     // OBJECTS //
-    let details = [  // what information to be displayed //
-        { id: 0, content: "overview", image: "planet"},
+    let details = [
+        // what information to be displayed //
+        { id: 0, content: "overview", image: "planet" },
         { id: 1, content: "structure", image: "internal" },
         { id: 2, content: "geology" },
     ];
@@ -17,7 +19,7 @@ import { getData } from "../stores/functionStore";
     // REACTIVE VALUES //
     $: path = $globalStore.currentPlanet; // shorten the markup
     let content = "overview"; // What content to display //
-    let imageType = "planet" // what image to display //
+    let imageType = "planet"; // what image to display //
     // FUNCTIONS //
     function toggle(id: string) {
         content = id;
@@ -32,8 +34,10 @@ import { getData } from "../stores/functionStore";
 <style lang="scss">
     @import "../sass/util/index";
 
-    section {
+    section, .planetInfo, img, .information, .cards{
         display: grid;
+    }
+    section {
         place-items: center;
         justify-content: center;
         width: 100%;
@@ -50,22 +54,18 @@ import { getData } from "../stores/functionStore";
                 grid-template-columns: 1fr 1fr;
                 margin-bottom: 1.5rem;
             }
-            .planetInfo{
-                display: grid;
-            }
             .geology {
                 position: absolute;
-                    width: 120px;
-                    top: 21%;
-                    @include tablet{
-                        top: 28%
-                    }
-                    @include desktop{
-                        top: 55%
-                    }
+                width: 120px;
+                top: 21%;
+                @include tablet {
+                    top: 28%;
+                }
+                @include desktop {
+                    top: 55%;
+                }
             }
             img {
-                display: grid;
                 max-width: toRem(300);
                 margin-top: 2rem;
                 place-self: center;
@@ -77,7 +77,6 @@ import { getData } from "../stores/functionStore";
                 }
             }
             .information {
-                display: grid;
                 grid-template-columns: 1fr;
                 text-align: center;
                 max-height: 100%;
@@ -89,7 +88,7 @@ import { getData } from "../stores/functionStore";
                     @include centered;
                     width: 90%;
                     min-height: 11rem;
-                    @include desktop{
+                    @include desktop {
                         min-height: 6rem;
                     }
                 }
@@ -116,8 +115,8 @@ import { getData } from "../stores/functionStore";
                             font-weight: 400;
                             text-decoration: none;
                         }
-                        img{
-                            margin: 0 0 0 .5rem;;
+                        img {
+                            margin: 0 0 0 0.5rem;
                         }
                     }
                 }
@@ -131,7 +130,6 @@ import { getData } from "../stores/functionStore";
     }
 
     .cards {
-        display: grid;
         place-items: center;
         grid-template-columns: 1fr;
         max-height: 102%;
@@ -150,33 +148,46 @@ import { getData } from "../stores/functionStore";
 
 <section>
     {#await getPlanetData(path)}
-        <p></p>
+        <p />
     {:then planet}
         <div class="planet">
-            <div class="planetInfo" in:fly={{duration: 555, x: -350, delay: 800}}>
+            <div
+                class="planetInfo"
+                in:fly={{ duration: 555, x: -350, delay: 800 }}
+            >
                 {#if content !== "geology"}
-                    <img src={planet.images[imageType]} alt="{planet.name}" />
+                    <img src={planet.images[imageType]} alt={planet.name} />
                 {:else}
-                <img src={planet.images.planet} alt="{planet.name}" />
-                <img in:fly={{duration: 1000, delay: 100, y: 100}} class="geology" src={planet.images.geology} alt="{planet.name}" />
+                    <img src={planet.images.planet} alt={planet.name} />
+                    <img
+                        in:fly={{ duration: 1000, delay: 100, y: 100 }}
+                        class="geology"
+                        src={planet.images.geology}
+                        alt={planet.name}
+                    />
                 {/if}
             </div>
-            
+
             <div class="information">
                 <div class="planet-info">
-                    <h1 in:fade={{delay: 1000}} >{planet.name}</h1>
-                    <div class="text" in:fade={{delay: 1000}}>
+                    <h1 in:fade={{ delay: 1000 }}>{planet.name}</h1>
+                    <div class="text" in:fade={{ delay: 1000 }}>
                         <h4>{planet[content].content}</h4>
-                        <a href={planet[content].source}><span>Source:</span> Wikipedia <img src="./assets/icon-source.svg" alt="icon"></a>
+                        <a href={planet[content].source}
+                            ><span>Source:</span> Wikipedia
+                            <img src="./assets/icon-source.svg" alt="icon" /></a
+                        >
                     </div>
                 </div>
                 <div class="btns">
                     {#each details as detail (detail.id)}
                         <Button
-                            on:click={() => toggle(detail.content.toLowerCase())}
-                            on:click={() => imageType = detail.image}
+                            on:click={() =>
+                                toggle(detail.content.toLowerCase())}
+                            on:click={() => (imageType = detail.image)}
                             active={content === detail.content}
-                            text={detail.content}/>
+                            text={detail.content}
+                        />
                     {/each}
                 </div>
             </div>

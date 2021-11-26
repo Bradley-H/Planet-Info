@@ -2,20 +2,22 @@
     import { getData } from "../../stores/functionStore";
     import { globalStore } from "../../stores/globalStore";
 
-    function ToggleActive() {
-        $globalStore.ModalActive = !$globalStore.ModalActive;
-        if ($globalStore.ModalActive) {
-            document.querySelector("body").style.overflow = "hidden";
-        } else {
-            document.querySelector("body").style.overflow = "unset";
+    
+function ToggleActive(){
+    $globalStore.ModalActive = !$globalStore.ModalActive
 
-        }
+    if ($globalStore.ModalActive) {
+        document.querySelector("body").style.overflow = "hidden";
+    } else {
+        document.querySelector("body").style.overflow = "unset";
     }
-
+}
 </script>
 
 <style lang="scss">
     @import "../../sass/util/index";
+
+    $map: ("Mercury": $mercury, "Venus": $venus, "Earth": $earth, "Mars": $mars, "Jupiter": $jupiter, "Saturn": $saturn, "Uranus": $uranus, "Neptune": $neptune);
     .modal {
         display: flex;
         position: fixed;
@@ -35,38 +37,38 @@
             margin-bottom: 1rem;
         }
         &-body {
-            display: grid;
-            grid-template-columns: 1fr;
-            align-items: flex-start;
-            height: 92vh;
-            margin-top: 1.5rem;
+            @include centered;
+            flex-direction: column;
+            margin-top: 1.75rem;
         }
         &-content{
-            margin-top: 3rem;
+            margin-top: 2.5rem;
         }
 
         button {
-            margin-bottom: 1rem; 
+            margin-bottom: toRem(66);
             text-decoration: none;
             color: $subHeading;
             font-weight: bold;
             font-family: $primaryFont;
             position: relative;
             cursor: pointer;
+            font-size: 1rem;
+            width: 100%;
             &:last-of-type {
-                margin-bottom: 3rem;
+                margin-bottom: 4rem;
             }
-            $map: ("Mercury": $mercury, "Venus": $venus, "Earth": $earth, "Mars": $mars, "Jupiter": $jupiter, "Saturn": $saturn, "Uranus": $uranus, "Neptune": $neptune);
+            @include tablet{
+                font-size: 1.3rem;
+            }
             @each $planet, $color in $map {
                 &.#{$planet}::after {
-                    content: "";
-                    width: toRem(22);
-                    height: toRem(22);
-                    border-radius: 50%;
-                    background-color: $color;
-                    position: absolute;
-                    left: -2rem;
-                    top: -1px;
+                   @extend %modal;
+                   background-color: $color;
+                    @include tablet{
+                        left: -.2rem;
+                        top: 4px;
+                    }
               }
                 &.#{$planet}.active{
                     color: $color;

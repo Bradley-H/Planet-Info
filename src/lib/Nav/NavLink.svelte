@@ -4,7 +4,7 @@ import { globalStore } from "../../stores/globalStore";
     export let text;
     import "../../sass/styles.scss";
 
-    $: path = $globalStore.currentPlanet; //shorten the markup //
+    $: path = $globalStore.currentPlanet; //shorten the markup to GlobalStore //
 </script>
 
 <style lang="scss">
@@ -20,6 +20,7 @@ import { globalStore } from "../../stores/globalStore";
         "Uranus": $uranus,
         "Neptune": $neptune,
     );
+    
     button {
         color: $subHeading;
         background-color: transparent;

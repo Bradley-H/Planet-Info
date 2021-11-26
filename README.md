@@ -1,38 +1,9 @@
-# create-svelte
+# PROJECT
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte);
+in this project I made about planets, using Svelte js, and SASS. This project was derived from FrontEndMentor.io website They gave me a design system and screenshots to use for this.
 
-## Creating a project
 
-If you're seeing this, you've probably already done this step. Congrats!
+# DIFFICULTIES
 
-```bash
-# create a new project in the current directory
-npm init svelte@next
-
-# create a new project in my-app
-npm init svelte@next my-app
-```
-
-> Note: the `@next` is temporary
-
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-Before creating a production version of your app, install an [adapter](https://kit.svelte.dev/docs#adapters) for your target environment. Then:
-
-```bash
-npm run build
-```
-
-> You can preview the built app with `npm run preview`, regardless of whether you installed an adapter. This should _not_ be used to serve your app in production.
+The biggest issue I had in this was in my opinion navigating through the JSON in a logical fashion and while not over doing it in.
+another issue I had was, orginally I wanted to take items from the Json and put them into an array to display, but thought that was quite ineffectient. Then opted to use the find method and take the items I found and displayed this. I thought this worked out better. it was a little troublesome to get to work. But I felt accomplished to get it done.

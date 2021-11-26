@@ -5,7 +5,7 @@
 import { globalStore } from '../../stores/globalStore';
     import "../../sass/styles.scss";
 
-$: path = $globalStore.currentPlanet; //shorten the markup
+$: path = $globalStore.currentPlanet; //shorten the markup to the globalStore
 </script>
 
 
