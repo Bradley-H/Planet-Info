@@ -4696,7 +4696,7 @@ var init_shims = __esm({
   }
 });
 
-// .svelte-kit/output/server/chunks/globalStore-48b9273f.js
+// .svelte-kit/output/server/chunks/functionStore-7a4f3a04.js
 function writable(value, start = noop) {
   let stop;
   const subscribers = new Set();
@@ -4738,11 +4738,23 @@ function writable(value, start = noop) {
   }
   return { set, update, subscribe: subscribe2 };
 }
+async function getData(path) {
+  const res = await fetch("./json/data.json");
+  const data = await res.json();
+  if (path) {
+    let info = data.find((item) => {
+      return item.name === path;
+    });
+    return info;
+  } else {
+    return data;
+  }
+}
 var subscriber_queue, globalStore;
-var init_globalStore_48b9273f = __esm({
-  ".svelte-kit/output/server/chunks/globalStore-48b9273f.js"() {
+var init_functionStore_7a4f3a04 = __esm({
+  ".svelte-kit/output/server/chunks/functionStore-7a4f3a04.js"() {
     init_shims();
-    init_app_5c876723();
+    init_app_639914cd();
     subscriber_queue = [];
     globalStore = writable({
       currentPlanet: "Earth",
@@ -4752,29 +4764,19 @@ var init_globalStore_48b9273f = __esm({
   }
 });
 
-// .svelte-kit/output/server/chunks/__layout-c08c4ee3.js
-var layout_c08c4ee3_exports = {};
-__export(layout_c08c4ee3_exports, {
+// .svelte-kit/output/server/chunks/__layout-668eb479.js
+var layout_668eb479_exports = {};
+__export(layout_668eb479_exports, {
   default: () => _layout
 });
-async function getData$1() {
-  const res = await fetch("./json/data.json");
-  const data = await res.json();
-  return data;
-}
-async function getData() {
-  const res = await fetch("./json/data.json");
-  const data = await res.json();
-  return data;
-}
 var css$4, NavLink, css$3, Modal, css$2, Burger, css$1, Nav, css, _layout;
-var init_layout_c08c4ee3 = __esm({
-  ".svelte-kit/output/server/chunks/__layout-c08c4ee3.js"() {
+var init_layout_668eb479 = __esm({
+  ".svelte-kit/output/server/chunks/__layout-668eb479.js"() {
     init_shims();
-    init_app_5c876723();
-    init_globalStore_48b9273f();
+    init_app_639914cd();
+    init_functionStore_7a4f3a04();
     css$4 = {
-      code: 'button.svelte-1vuj0b0{color:#838391;background-color:transparent;border:none;cursor:pointer;margin-right:0.625rem;text-decoration:none;font-weight:bold;margin-bottom:0.5rem;transition:all 0.8s ease-in-out;position:relative}@media(min-width: 768px) and (max-width: 991px){button.svelte-1vuj0b0{font-size:0.79rem}}@media(min-width: 992px){button.svelte-1vuj0b0{margin-right:2.25rem;font-size:0.85rem}}button.Mercury.svelte-1vuj0b0:hover,button.Mercury.active.svelte-1vuj0b0{color:#419db9}button.Mercury.active.svelte-1vuj0b0::after,button.Mercury.nonActive.svelte-1vuj0b0::after{content:"";position:absolute;left:0;height:4px;background:#419db9;transition:all 0.8s ease-in-out}button.Mercury.active.svelte-1vuj0b0::after{bottom:-0.3rem;width:100%}button.Mercury.nonActive.svelte-1vuj0b0::after{bottom:-3.5rem;width:100%}button.Venus.svelte-1vuj0b0:hover,button.Venus.active.svelte-1vuj0b0{color:#eda44a}button.Venus.active.svelte-1vuj0b0::after,button.Venus.nonActive.svelte-1vuj0b0::after{content:"";position:absolute;left:0;height:4px;background:#eda44a;transition:all 0.8s ease-in-out}button.Venus.active.svelte-1vuj0b0::after{bottom:-0.3rem;width:100%}button.Venus.nonActive.svelte-1vuj0b0::after{bottom:-3.5rem;width:100%}button.Earth.svelte-1vuj0b0:hover,button.Earth.active.svelte-1vuj0b0{color:#6f2ed6}button.Earth.active.svelte-1vuj0b0::after,button.Earth.nonActive.svelte-1vuj0b0::after{content:"";position:absolute;left:0;height:4px;background:#6f2ed6;transition:all 0.8s ease-in-out}button.Earth.active.svelte-1vuj0b0::after{bottom:-0.3rem;width:100%}button.Earth.nonActive.svelte-1vuj0b0::after{bottom:-3.5rem;width:100%}button.Mars.svelte-1vuj0b0:hover,button.Mars.active.svelte-1vuj0b0{color:#d15533}button.Mars.active.svelte-1vuj0b0::after,button.Mars.nonActive.svelte-1vuj0b0::after{content:"";position:absolute;left:0;height:4px;background:#d15533;transition:all 0.8s ease-in-out}button.Mars.active.svelte-1vuj0b0::after{bottom:-0.3rem;width:100%}button.Mars.nonActive.svelte-1vuj0b0::after{bottom:-3.5rem;width:100%}button.Jupiter.svelte-1vuj0b0:hover,button.Jupiter.active.svelte-1vuj0b0{color:#d93b36}button.Jupiter.active.svelte-1vuj0b0::after,button.Jupiter.nonActive.svelte-1vuj0b0::after{content:"";position:absolute;left:0;height:4px;background:#d93b36;transition:all 0.8s ease-in-out}button.Jupiter.active.svelte-1vuj0b0::after{bottom:-0.3rem;width:100%}button.Jupiter.nonActive.svelte-1vuj0b0::after{bottom:-3.5rem;width:100%}button.Saturn.svelte-1vuj0b0:hover,button.Saturn.active.svelte-1vuj0b0{color:#cb5020}button.Saturn.active.svelte-1vuj0b0::after,button.Saturn.nonActive.svelte-1vuj0b0::after{content:"";position:absolute;left:0;height:4px;background:#cb5020;transition:all 0.8s ease-in-out}button.Saturn.active.svelte-1vuj0b0::after{bottom:-0.3rem;width:100%}button.Saturn.nonActive.svelte-1vuj0b0::after{bottom:-3.5rem;width:100%}button.Uranus.svelte-1vuj0b0:hover,button.Uranus.active.svelte-1vuj0b0{color:#1ec2a4}button.Uranus.active.svelte-1vuj0b0::after,button.Uranus.nonActive.svelte-1vuj0b0::after{content:"";position:absolute;left:0;height:4px;background:#1ec2a4;transition:all 0.8s ease-in-out}button.Uranus.active.svelte-1vuj0b0::after{bottom:-0.3rem;width:100%}button.Uranus.nonActive.svelte-1vuj0b0::after{bottom:-3.5rem;width:100%}button.Neptune.svelte-1vuj0b0:hover,button.Neptune.active.svelte-1vuj0b0{color:#2d68f0}button.Neptune.active.svelte-1vuj0b0::after,button.Neptune.nonActive.svelte-1vuj0b0::after{content:"";position:absolute;left:0;height:4px;background:#2d68f0;transition:all 0.8s ease-in-out}button.Neptune.active.svelte-1vuj0b0::after{bottom:-0.3rem;width:100%}button.Neptune.nonActive.svelte-1vuj0b0::after{bottom:-3.5rem;width:100%}@keyframes svelte-1vuj0b0-NavLinkActiveAnimation{from{bottom:-2.5rem}to{bottom:-0.5rem}}@keyframes svelte-1vuj0b0-NavLinkActiveAnimationReverse{from{bottom:-0.5rem;opacity:1}to{bottom:-5.5rem;opacity:0}}',
+      code: 'button.svelte-1t6ud6r{color:#838391;background-color:transparent;border:none;cursor:pointer;margin-right:0.8125rem;text-decoration:none;font-weight:bold;margin-bottom:0.5rem;transition:all 0.8s ease-in-out;position:relative}@media(min-width: 768px) and (max-width: 991px){button.svelte-1t6ud6r{font-size:0.79rem}}@media(min-width: 992px){button.svelte-1t6ud6r{margin-right:2.25rem;font-size:0.85rem}}button.Mercury.svelte-1t6ud6r:hover,button.Mercury.active.svelte-1t6ud6r{color:#419db9}button.Mercury.active.svelte-1t6ud6r::after,button.Mercury.nonActive.svelte-1t6ud6r::after{content:"";position:absolute;left:0;height:4px;background:#419db9;transition:all 0.8s ease-in-out}button.Mercury.active.svelte-1t6ud6r::after{bottom:-0.5rem;width:100%}button.Mercury.nonActive.svelte-1t6ud6r::after{bottom:-3.5rem;width:100%}button.Venus.svelte-1t6ud6r:hover,button.Venus.active.svelte-1t6ud6r{color:#eda44a}button.Venus.active.svelte-1t6ud6r::after,button.Venus.nonActive.svelte-1t6ud6r::after{content:"";position:absolute;left:0;height:4px;background:#eda44a;transition:all 0.8s ease-in-out}button.Venus.active.svelte-1t6ud6r::after{bottom:-0.5rem;width:100%}button.Venus.nonActive.svelte-1t6ud6r::after{bottom:-3.5rem;width:100%}button.Earth.svelte-1t6ud6r:hover,button.Earth.active.svelte-1t6ud6r{color:#6f2ed6}button.Earth.active.svelte-1t6ud6r::after,button.Earth.nonActive.svelte-1t6ud6r::after{content:"";position:absolute;left:0;height:4px;background:#6f2ed6;transition:all 0.8s ease-in-out}button.Earth.active.svelte-1t6ud6r::after{bottom:-0.5rem;width:100%}button.Earth.nonActive.svelte-1t6ud6r::after{bottom:-3.5rem;width:100%}button.Mars.svelte-1t6ud6r:hover,button.Mars.active.svelte-1t6ud6r{color:#d15533}button.Mars.active.svelte-1t6ud6r::after,button.Mars.nonActive.svelte-1t6ud6r::after{content:"";position:absolute;left:0;height:4px;background:#d15533;transition:all 0.8s ease-in-out}button.Mars.active.svelte-1t6ud6r::after{bottom:-0.5rem;width:100%}button.Mars.nonActive.svelte-1t6ud6r::after{bottom:-3.5rem;width:100%}button.Jupiter.svelte-1t6ud6r:hover,button.Jupiter.active.svelte-1t6ud6r{color:#d93b36}button.Jupiter.active.svelte-1t6ud6r::after,button.Jupiter.nonActive.svelte-1t6ud6r::after{content:"";position:absolute;left:0;height:4px;background:#d93b36;transition:all 0.8s ease-in-out}button.Jupiter.active.svelte-1t6ud6r::after{bottom:-0.5rem;width:100%}button.Jupiter.nonActive.svelte-1t6ud6r::after{bottom:-3.5rem;width:100%}button.Saturn.svelte-1t6ud6r:hover,button.Saturn.active.svelte-1t6ud6r{color:#cb5020}button.Saturn.active.svelte-1t6ud6r::after,button.Saturn.nonActive.svelte-1t6ud6r::after{content:"";position:absolute;left:0;height:4px;background:#cb5020;transition:all 0.8s ease-in-out}button.Saturn.active.svelte-1t6ud6r::after{bottom:-0.5rem;width:100%}button.Saturn.nonActive.svelte-1t6ud6r::after{bottom:-3.5rem;width:100%}button.Uranus.svelte-1t6ud6r:hover,button.Uranus.active.svelte-1t6ud6r{color:#1ec2a4}button.Uranus.active.svelte-1t6ud6r::after,button.Uranus.nonActive.svelte-1t6ud6r::after{content:"";position:absolute;left:0;height:4px;background:#1ec2a4;transition:all 0.8s ease-in-out}button.Uranus.active.svelte-1t6ud6r::after{bottom:-0.5rem;width:100%}button.Uranus.nonActive.svelte-1t6ud6r::after{bottom:-3.5rem;width:100%}button.Neptune.svelte-1t6ud6r:hover,button.Neptune.active.svelte-1t6ud6r{color:#2d68f0}button.Neptune.active.svelte-1t6ud6r::after,button.Neptune.nonActive.svelte-1t6ud6r::after{content:"";position:absolute;left:0;height:4px;background:#2d68f0;transition:all 0.8s ease-in-out}button.Neptune.active.svelte-1t6ud6r::after{bottom:-0.5rem;width:100%}button.Neptune.nonActive.svelte-1t6ud6r::after{bottom:-3.5rem;width:100%}@keyframes svelte-1t6ud6r-NavLinkActiveAnimation{from{bottom:-2.5rem}to{bottom:-1rem}}@keyframes svelte-1t6ud6r-NavLinkActiveAnimationReverse{from{bottom:-0.5rem;opacity:1}to{bottom:-5.5rem;opacity:0}}',
       map: null
     };
     NavLink = create_ssr_component(($$result, $$props, $$bindings, slots) => {
@@ -4788,12 +4790,12 @@ var init_layout_c08c4ee3 = __esm({
       path = $globalStore.currentPlanet;
       $$unsubscribe_globalStore();
       return `<button class="${[
-        escape(null_to_empty(text)) + " svelte-1vuj0b0",
+        escape(null_to_empty(text)) + " svelte-1t6ud6r",
         (path !== text ? "nonActive" : "") + " " + (path === text ? "active" : "")
       ].join(" ").trim()}">${escape(text)}</button>`;
     });
     css$3 = {
-      code: '.modal.svelte-1hd3xzj.svelte-1hd3xzj{display:flex;position:fixed;bottom:0;left:0;min-width:110%;height:100vh;background:#080826;box-shadow:0 0 10px rgba(0, 0, 0, 0.1);z-index:2;justify-content:center;transform:translateX(-100%);transition:all 0.8s ease-in-out;z-index:11}.modal.active.svelte-1hd3xzj.svelte-1hd3xzj{transform:translateX(0%)}.modal-header.svelte-1hd3xzj.svelte-1hd3xzj{margin-bottom:1rem}.modal-body.svelte-1hd3xzj.svelte-1hd3xzj{height:100vh;margin-top:1.5rem;display:grid;grid-template-columns:1fr;align-items:flex-start}.modal.svelte-1hd3xzj button.svelte-1hd3xzj{margin-bottom:1rem;text-decoration:none;color:#838391;font-weight:bold;font-family:"Antonio", sans-serif;position:relative;cursor:pointer}.modal.svelte-1hd3xzj button.svelte-1hd3xzj:last-of-type{margin-bottom:3rem}.modal.svelte-1hd3xzj button.Mercury.svelte-1hd3xzj::after{content:"";width:1.375rem;height:1.375rem;border-radius:50%;background-color:#419db9;position:absolute;left:-2rem;top:-1px}.modal.svelte-1hd3xzj button.Mercury.active.svelte-1hd3xzj{color:#419db9}.modal.svelte-1hd3xzj button.Venus.svelte-1hd3xzj::after{content:"";width:1.375rem;height:1.375rem;border-radius:50%;background-color:#eda44a;position:absolute;left:-2rem;top:-1px}.modal.svelte-1hd3xzj button.Venus.active.svelte-1hd3xzj{color:#eda44a}.modal.svelte-1hd3xzj button.Earth.svelte-1hd3xzj::after{content:"";width:1.375rem;height:1.375rem;border-radius:50%;background-color:#6f2ed6;position:absolute;left:-2rem;top:-1px}.modal.svelte-1hd3xzj button.Earth.active.svelte-1hd3xzj{color:#6f2ed6}.modal.svelte-1hd3xzj button.Mars.svelte-1hd3xzj::after{content:"";width:1.375rem;height:1.375rem;border-radius:50%;background-color:#d15533;position:absolute;left:-2rem;top:-1px}.modal.svelte-1hd3xzj button.Mars.active.svelte-1hd3xzj{color:#d15533}.modal.svelte-1hd3xzj button.Jupiter.svelte-1hd3xzj::after{content:"";width:1.375rem;height:1.375rem;border-radius:50%;background-color:#d93b36;position:absolute;left:-2rem;top:-1px}.modal.svelte-1hd3xzj button.Jupiter.active.svelte-1hd3xzj{color:#d93b36}.modal.svelte-1hd3xzj button.Saturn.svelte-1hd3xzj::after{content:"";width:1.375rem;height:1.375rem;border-radius:50%;background-color:#cb5020;position:absolute;left:-2rem;top:-1px}.modal.svelte-1hd3xzj button.Saturn.active.svelte-1hd3xzj{color:#cb5020}.modal.svelte-1hd3xzj button.Uranus.svelte-1hd3xzj::after{content:"";width:1.375rem;height:1.375rem;border-radius:50%;background-color:#1ec2a4;position:absolute;left:-2rem;top:-1px}.modal.svelte-1hd3xzj button.Uranus.active.svelte-1hd3xzj{color:#1ec2a4}.modal.svelte-1hd3xzj button.Neptune.svelte-1hd3xzj::after{content:"";width:1.375rem;height:1.375rem;border-radius:50%;background-color:#2d68f0;position:absolute;left:-2rem;top:-1px}.modal.svelte-1hd3xzj button.Neptune.active.svelte-1hd3xzj{color:#2d68f0}',
+      code: '.modal.svelte-1gijuze.svelte-1gijuze{display:flex;position:fixed;bottom:0;left:0;min-width:110%;height:100vh;background:#080826;box-shadow:0 0 10px rgba(0, 0, 0, 0.1);z-index:2;justify-content:center;transform:translateX(-100%);transition:all 0.8s ease-in-out;z-index:11}.modal.active.svelte-1gijuze.svelte-1gijuze{transform:translateX(0%)}.modal-header.svelte-1gijuze.svelte-1gijuze{margin-bottom:1rem}.modal-body.svelte-1gijuze.svelte-1gijuze{height:92vh;margin-top:1.5rem;display:grid;grid-template-columns:1fr;align-items:flex-start}.modal-content.svelte-1gijuze.svelte-1gijuze{margin-top:3rem}.modal.svelte-1gijuze button.svelte-1gijuze{margin-bottom:1rem;text-decoration:none;color:#838391;font-weight:bold;font-family:"Antonio", sans-serif;position:relative;cursor:pointer}.modal.svelte-1gijuze button.svelte-1gijuze:last-of-type{margin-bottom:3rem}.modal.svelte-1gijuze button.Mercury.svelte-1gijuze::after{content:"";width:1.375rem;height:1.375rem;border-radius:50%;background-color:#419db9;position:absolute;left:-2rem;top:-1px}.modal.svelte-1gijuze button.Mercury.active.svelte-1gijuze{color:#419db9}.modal.svelte-1gijuze button.Venus.svelte-1gijuze::after{content:"";width:1.375rem;height:1.375rem;border-radius:50%;background-color:#eda44a;position:absolute;left:-2rem;top:-1px}.modal.svelte-1gijuze button.Venus.active.svelte-1gijuze{color:#eda44a}.modal.svelte-1gijuze button.Earth.svelte-1gijuze::after{content:"";width:1.375rem;height:1.375rem;border-radius:50%;background-color:#6f2ed6;position:absolute;left:-2rem;top:-1px}.modal.svelte-1gijuze button.Earth.active.svelte-1gijuze{color:#6f2ed6}.modal.svelte-1gijuze button.Mars.svelte-1gijuze::after{content:"";width:1.375rem;height:1.375rem;border-radius:50%;background-color:#d15533;position:absolute;left:-2rem;top:-1px}.modal.svelte-1gijuze button.Mars.active.svelte-1gijuze{color:#d15533}.modal.svelte-1gijuze button.Jupiter.svelte-1gijuze::after{content:"";width:1.375rem;height:1.375rem;border-radius:50%;background-color:#d93b36;position:absolute;left:-2rem;top:-1px}.modal.svelte-1gijuze button.Jupiter.active.svelte-1gijuze{color:#d93b36}.modal.svelte-1gijuze button.Saturn.svelte-1gijuze::after{content:"";width:1.375rem;height:1.375rem;border-radius:50%;background-color:#cb5020;position:absolute;left:-2rem;top:-1px}.modal.svelte-1gijuze button.Saturn.active.svelte-1gijuze{color:#cb5020}.modal.svelte-1gijuze button.Uranus.svelte-1gijuze::after{content:"";width:1.375rem;height:1.375rem;border-radius:50%;background-color:#1ec2a4;position:absolute;left:-2rem;top:-1px}.modal.svelte-1gijuze button.Uranus.active.svelte-1gijuze{color:#1ec2a4}.modal.svelte-1gijuze button.Neptune.svelte-1gijuze::after{content:"";width:1.375rem;height:1.375rem;border-radius:50%;background-color:#2d68f0;position:absolute;left:-2rem;top:-1px}.modal.svelte-1gijuze button.Neptune.active.svelte-1gijuze{color:#2d68f0}',
       map: null
     };
     Modal = create_ssr_component(($$result, $$props, $$bindings, slots) => {
@@ -4801,8 +4803,8 @@ var init_layout_c08c4ee3 = __esm({
       $$unsubscribe_globalStore = subscribe(globalStore, (value) => $globalStore = value);
       $$result.css.add(css$3);
       $$unsubscribe_globalStore();
-      return `<aside class="${["modal svelte-1hd3xzj", $globalStore.ModalActive ? "active" : ""].join(" ").trim()}"><div class="${"modal-content"}"><div class="${"modal-header svelte-1hd3xzj"}"><h2>THE PLANETS</h2></div>
-        <div class="${"modal-body svelte-1hd3xzj"}">${function(__value) {
+      return `<aside class="${["modal svelte-1gijuze", $globalStore.ModalActive ? "active" : ""].join(" ").trim()}"><div class="${"modal-content svelte-1gijuze"}"><div class="${"modal-header svelte-1gijuze"}"><h2>THE PLANETS</h2></div>
+        <div class="${"modal-body svelte-1gijuze"}">${function(__value) {
         if (is_promise(__value)) {
           __value.then(null, noop);
           return `
@@ -4811,14 +4813,14 @@ var init_layout_c08c4ee3 = __esm({
         }
         return function(planets) {
           return `
-                ${each(planets, (planet) => `<button class="${escape(null_to_empty(planet.name)) + " svelte-1hd3xzj"}">${escape(planet.name)}
+                ${each(planets, (planet) => `<button class="${escape(null_to_empty(planet.name)) + " svelte-1gijuze"}">${escape(planet.name)}
                     </button>`)}
             `;
         }(__value);
-      }(getData$1())}</div></div></aside>`;
+      }(getData())}</div></div></aside>`;
     });
     css$2 = {
-      code: ".burger.svelte-1ujtjqd.svelte-1ujtjqd{display:flex;flex-direction:column;height:auto;cursor:pointer;transition:all 0.8s ease-in-out;transform-origin:center;width:2.125rem;position:absolute;right:1.1875rem;top:0.6rem;z-index:12}@media(min-width: 992px){.burger.svelte-1ujtjqd.svelte-1ujtjqd{display:none}}.burger.active.svelte-1ujtjqd.svelte-1ujtjqd{transform:rotate(360deg) translateX(10px) translateY(10px)}.burger.active.svelte-1ujtjqd .line.svelte-1ujtjqd:nth-of-type(3){opacity:0}.burger.active.svelte-1ujtjqd .line.svelte-1ujtjqd:nth-of-type(2){transform:rotate(45deg) translateX(-9px)}.burger.active.svelte-1ujtjqd .line.svelte-1ujtjqd:nth-of-type(1){transform:rotate(-45deg) translateX(-9px)}.line.svelte-1ujtjqd.svelte-1ujtjqd{height:6px;width:2rem;background-color:#838391;margin-top:7px;transition:all 0.8s ease-in-out}",
+      code: ".burger.svelte-12igdzk.svelte-12igdzk{display:flex;flex-direction:column;height:auto;cursor:pointer;transition:all 0.8s ease-in-out;transform-origin:center centere;width:2.125rem;z-index:12;margin-left:auto;margin-right:1rem}@media(min-width: 768px){.burger.svelte-12igdzk.svelte-12igdzk{display:none;margin:0}}.burger.active.svelte-12igdzk.svelte-12igdzk{transform:rotate(360deg) translateX(10px) translateY(1rem);position:fixed}.burger.active.svelte-12igdzk .line.svelte-12igdzk:nth-of-type(3){opacity:0}.burger.active.svelte-12igdzk .line.svelte-12igdzk:nth-of-type(2){transform:rotate(45deg) translateX(-9px)}.burger.active.svelte-12igdzk .line.svelte-12igdzk:nth-of-type(1){transform:rotate(-45deg) translateX(-9px)}.line.svelte-12igdzk.svelte-12igdzk{height:6px;width:2rem;background-color:#838391;margin-top:7px;transition:all 0.8s ease-in-out}",
       map: null
     };
     Burger = create_ssr_component(($$result, $$props, $$bindings, slots) => {
@@ -4826,33 +4828,31 @@ var init_layout_c08c4ee3 = __esm({
       $$unsubscribe_globalStore = subscribe(globalStore, (value) => $globalStore = value);
       $$result.css.add(css$2);
       $$unsubscribe_globalStore();
-      return `<div class="${["burger svelte-1ujtjqd", $globalStore.ModalActive ? "active" : ""].join(" ").trim()}"><div class="${"line svelte-1ujtjqd"}"></div>
-    <div class="${"line svelte-1ujtjqd"}"></div>
-    <div class="${"line svelte-1ujtjqd"}"></div></div>
+      return `<div class="${["burger svelte-12igdzk", $globalStore.ModalActive ? "active" : ""].join(" ").trim()}"><div class="${"line svelte-12igdzk"}"></div>
+    <div class="${"line svelte-12igdzk"}"></div>
+    <div class="${"line svelte-12igdzk"}"></div></div>
 
 ${validate_component(Modal, "Modal").$$render($$result, {}, {}, {})}`;
     });
     css$1 = {
-      code: 'nav.svelte-a0ht6k.svelte-a0ht6k{display:flex;background-color:#070722;background-image:url("/assets/background-stars.svg");flex-direction:column;width:100%;border-bottom:1px solid #838391;padding-bottom:1.5rem;overflow:hidden;height:4rem}@media(min-width: 992px){nav.svelte-a0ht6k.svelte-a0ht6k{flex-direction:row;padding-bottom:1rem}}nav.svelte-a0ht6k h1.svelte-a0ht6k{display:flex;justify-content:center;align-items:center;margin-top:1rem;font-family:"Spartan", sans-serif;font-size:2rem;color:white}@media(min-width: 992px){nav.svelte-a0ht6k h1.svelte-a0ht6k{font-size:2.2rem;margin-left:1rem;margin-top:1.5rem}}nav.svelte-a0ht6k .planet-links.svelte-a0ht6k{display:none;align-items:center;margin-top:1.5rem}@media(min-width: 768px){nav.svelte-a0ht6k .planet-links.svelte-a0ht6k{display:flex}}@media(min-width: 768px) and (max-width: 991px){nav.svelte-a0ht6k .planet-links.svelte-a0ht6k{justify-content:space-evenly}}@media(min-width: 992px){nav.svelte-a0ht6k .planet-links.svelte-a0ht6k{margin-left:auto}}',
+      code: 'nav.svelte-vvj1y5.svelte-vvj1y5{display:flex;justify-content:center;align-items:center;background-color:#070722;background-image:url("/assets/background-stars.svg");width:100%;border-bottom:1px solid #838391;overflow:hidden;height:5rem}@media(min-width: 768px){nav.svelte-vvj1y5.svelte-vvj1y5{justify-content:flex-start}}@media(min-width: 992px){nav.svelte-vvj1y5.svelte-vvj1y5{flex-direction:row;padding-bottom:1rem}}nav.svelte-vvj1y5 h1.svelte-vvj1y5{display:flex;justify-content:center;align-items:center;margin-top:1rem;margin-left:1rem;font-family:"Spartan", sans-serif;font-size:2rem;color:white}@media(min-width: 992px){nav.svelte-vvj1y5 h1.svelte-vvj1y5{font-size:2.2rem;margin-left:1rem;margin-top:1.5rem}}nav.svelte-vvj1y5 .planet-links.svelte-vvj1y5{display:none;align-items:center;margin-top:1.5rem}@media(min-width: 768px){nav.svelte-vvj1y5 .planet-links.svelte-vvj1y5{display:flex;margin-left:auto;margin-right:1rem}}@media(min-width: 768px) and (max-width: 991px){nav.svelte-vvj1y5 .planet-links.svelte-vvj1y5{justify-content:space-evenly}}@media(min-width: 992px){nav.svelte-vvj1y5 .planet-links.svelte-vvj1y5{margin-left:auto}}',
       map: null
     };
     Nav = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+      let planets = [
+        { id: 0, name: "Mercury" },
+        { id: 1, name: "Venus" },
+        { id: 2, name: "Earth" },
+        { id: 3, name: "Mars" },
+        { id: 4, name: "Jupiter" },
+        { id: 5, name: "Saturn" },
+        { id: 6, name: "Uranus" },
+        { id: 7, name: "Neptune" }
+      ];
       $$result.css.add(css$1);
-      return `${validate_component(Burger, "Burger").$$render($$result, {}, {}, {})}
-<nav class="${"svelte-a0ht6k"}"><h1 class="${"svelte-a0ht6k"}">THE PLANETS</h1>
-    <div class="${"planet-links svelte-a0ht6k"}">${function(__value) {
-        if (is_promise(__value)) {
-          __value.then(null, noop);
-          return `
-        <p>Getting Planets.....</p>
-    `;
-        }
-        return function(planets) {
-          return `
-        ${each(planets, (planet) => `${validate_component(NavLink, "NavLink").$$render($$result, { text: planet.name }, {}, {})}`)}
-    `;
-        }(__value);
-      }(getData())}</div></nav>`;
+      return `<nav class="${"svelte-vvj1y5"}"><h1 class="${"svelte-vvj1y5"}">THE PLANETS</h1>
+    <div class="${"planet-links svelte-vvj1y5"}">${each(planets, (planet) => `${validate_component(NavLink, "NavLink").$$render($$result, { text: planet.name }, {}, {})}`)}</div>
+    ${validate_component(Burger, "Burger").$$render($$result, {}, {}, {})}</nav>`;
     });
     css = {
       code: "main.svelte-1333o3r{display:flex;flex-direction:column;width:100%}",
@@ -4866,9 +4866,9 @@ ${validate_component(Modal, "Modal").$$render($$result, {}, {}, {})}`;
   }
 });
 
-// .svelte-kit/output/server/chunks/error-de4931e2.js
-var error_de4931e2_exports = {};
-__export(error_de4931e2_exports, {
+// .svelte-kit/output/server/chunks/error-0a7de075.js
+var error_0a7de075_exports = {};
+__export(error_0a7de075_exports, {
   default: () => Error2,
   load: () => load
 });
@@ -4876,10 +4876,10 @@ function load({ error: error2, status }) {
   return { props: { error: error2, status } };
 }
 var Error2;
-var init_error_de4931e2 = __esm({
-  ".svelte-kit/output/server/chunks/error-de4931e2.js"() {
+var init_error_0a7de075 = __esm({
+  ".svelte-kit/output/server/chunks/error-0a7de075.js"() {
     init_shims();
-    init_app_5c876723();
+    init_app_639914cd();
     Error2 = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       let { status } = $$props;
       let { error: error2 } = $$props;
@@ -4899,19 +4899,19 @@ ${error2.stack ? `<pre>${escape(error2.stack)}</pre>` : ``}`;
   }
 });
 
-// .svelte-kit/output/server/chunks/index-ed1e6d29.js
-var index_ed1e6d29_exports = {};
-__export(index_ed1e6d29_exports, {
+// .svelte-kit/output/server/chunks/index-6e174332.js
+var index_6e174332_exports = {};
+__export(index_6e174332_exports, {
   default: () => Routes
 });
 var css$22, Button, css$12, Card, css2, Routes;
-var init_index_ed1e6d29 = __esm({
-  ".svelte-kit/output/server/chunks/index-ed1e6d29.js"() {
+var init_index_6e174332 = __esm({
+  ".svelte-kit/output/server/chunks/index-6e174332.js"() {
     init_shims();
-    init_app_5c876723();
-    init_globalStore_48b9273f();
+    init_app_639914cd();
+    init_functionStore_7a4f3a04();
     css$22 = {
-      code: "button.svelte-dsv6nl,a.svelte-dsv6nl{display:flex;justify-content:center;align-items:center;padding:1.2rem 3rem 1.2rem 0.5rem;max-width:18rem;background-color:transparent;color:white;font-size:1.1rem;border:1px solid #838391;transition:all 0.8s ease-in-out;text-decoration:none;min-width:155px;cursor:pointer;text-transform:capitalize;z-index:3;margin-top:0.875rem}@media(min-width: 992px){button.svelte-dsv6nl,a.svelte-dsv6nl{width:23rem}}button.svelte-dsv6nl:hover,a.svelte-dsv6nl:hover{background-color:#838391;color:white}button.Mercury.active.svelte-dsv6nl,a.Mercury.active.svelte-dsv6nl{background-color:#419db9}button.Venus.active.svelte-dsv6nl,a.Venus.active.svelte-dsv6nl{background-color:#eda44a}button.Earth.active.svelte-dsv6nl,a.Earth.active.svelte-dsv6nl{background-color:#6f2ed6}button.Mars.active.svelte-dsv6nl,a.Mars.active.svelte-dsv6nl{background-color:#d15533}button.Jupiter.active.svelte-dsv6nl,a.Jupiter.active.svelte-dsv6nl{background-color:#d93b36}button.Saturn.active.svelte-dsv6nl,a.Saturn.active.svelte-dsv6nl{background-color:#cb5020}button.Uranus.active.svelte-dsv6nl,a.Uranus.active.svelte-dsv6nl{background-color:#1ec2a4}button.Neptune.active.svelte-dsv6nl,a.Neptune.active.svelte-dsv6nl{background-color:#2d68f0}",
+      code: "button.svelte-1do668r,a.svelte-1do668r{display:flex;justify-content:center;align-items:center;padding:1.2rem 3rem 1.2rem 0.5rem;width:13.5rem;background-color:transparent;color:white;font-size:1.1rem;border:1px solid #838391;transition:all 0.8s ease-in-out;text-decoration:none;min-width:155px;cursor:pointer;text-transform:capitalize;z-index:3;margin-top:0.875rem}@media(min-width: 768px) and (max-width: 991px){button.svelte-1do668r,a.svelte-1do668r{width:16rem}}@media(min-width: 992px){button.svelte-1do668r,a.svelte-1do668r{width:23rem;margin-top:0.875rem}}button.svelte-1do668r:hover,a.svelte-1do668r:hover{background-color:#838391;color:white}button.Mercury.active.svelte-1do668r,a.Mercury.active.svelte-1do668r{background-color:#419db9}button.Venus.active.svelte-1do668r,a.Venus.active.svelte-1do668r{background-color:#eda44a}button.Earth.active.svelte-1do668r,a.Earth.active.svelte-1do668r{background-color:#6f2ed6}button.Mars.active.svelte-1do668r,a.Mars.active.svelte-1do668r{background-color:#d15533}button.Jupiter.active.svelte-1do668r,a.Jupiter.active.svelte-1do668r{background-color:#d93b36}button.Saturn.active.svelte-1do668r,a.Saturn.active.svelte-1do668r{background-color:#cb5020}button.Uranus.active.svelte-1do668r,a.Uranus.active.svelte-1do668r{background-color:#1ec2a4}button.Neptune.active.svelte-1do668r,a.Neptune.active.svelte-1do668r{background-color:#2d68f0}",
       map: null
     };
     Button = create_ssr_component(($$result, $$props, $$bindings, slots) => {
@@ -4930,7 +4930,7 @@ var init_index_ed1e6d29 = __esm({
       $$result.css.add(css$22);
       path = $globalStore.currentPlanet;
       $$unsubscribe_globalStore();
-      return `${!href ? `<button class="${[escape(null_to_empty(path)) + " svelte-dsv6nl", active ? "active" : ""].join(" ").trim()}">${escape(text)}</button>` : `<a${add_attribute("href", href, 0)} class="${[escape(null_to_empty(path)) + " svelte-dsv6nl", active ? "active" : ""].join(" ").trim()}">${escape(text)}</a>`}`;
+      return `${!href ? `<button class="${[escape(null_to_empty(path)) + " svelte-1do668r", active ? "active" : ""].join(" ").trim()}">${escape(text)}</button>` : `<a${add_attribute("href", href, 0)} class="${[escape(null_to_empty(path)) + " svelte-1do668r", active ? "active" : ""].join(" ").trim()}">${escape(text)}</a>`}`;
     });
     css$12 = {
       code: ".card.svelte-1kf9xc3.svelte-1kf9xc3{display:flex;flex-direction:column;text-align:start;width:14.5rem;max-width:17rem;height:5rem;border:1px solid #838391;font-weight:bold;margin-top:0.9375rem;overflow:hidden}.card.svelte-1kf9xc3 .title.svelte-1kf9xc3{margin-top:0.6875rem;text-align:center;width:100%}.card.svelte-1kf9xc3 .title p.svelte-1kf9xc3{color:#838391}.card.svelte-1kf9xc3 .content.svelte-1kf9xc3{margin-top:0.5625rem;text-align:center;width:100%}.card.svelte-1kf9xc3 .content h4.svelte-1kf9xc3{font-size:1.5625rem}",
@@ -4948,7 +4948,7 @@ var init_index_ed1e6d29 = __esm({
     <div class="${"content svelte-1kf9xc3"}"><h4 class="${"svelte-1kf9xc3"}">${escape(value)}</h4></div></div>`;
     });
     css2 = {
-      code: "section.svelte-1kpskqx.svelte-1kpskqx{display:grid;place-items:center;justify-content:center;width:100%;position:relative}section.svelte-1kpskqx .planet.svelte-1kpskqx{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;margin-top:0.5rem;height:100%;position:relative}@media(min-width: 992px){section.svelte-1kpskqx .planet.svelte-1kpskqx{display:grid;grid-template-columns:1fr 1fr;margin-bottom:1.5rem}}section.svelte-1kpskqx .planet .planetInfo.svelte-1kpskqx{display:grid}section.svelte-1kpskqx .planet .geology.svelte-1kpskqx{position:absolute;width:120px;top:22%}@media(min-width: 768px) and (max-width: 991px){section.svelte-1kpskqx .planet .geology.svelte-1kpskqx{top:28%}}@media(min-width: 992px){section.svelte-1kpskqx .planet .geology.svelte-1kpskqx{top:55%}}section.svelte-1kpskqx .planet img.svelte-1kpskqx{display:grid;max-width:18.75rem;margin-top:2rem;place-self:center}@media(min-width: 768px) and (max-width: 991px){section.svelte-1kpskqx .planet img.svelte-1kpskqx{max-width:20rem}}@media(min-width: 992px){section.svelte-1kpskqx .planet img.svelte-1kpskqx{max-width:23.75rem}}section.svelte-1kpskqx .planet .information.svelte-1kpskqx{display:grid;grid-template-columns:1fr;text-align:center;max-height:100%;margin-top:1rem}@media(min-width: 768px) and (max-width: 991px){section.svelte-1kpskqx .planet .information.svelte-1kpskqx{grid-template-columns:1fr 1fr}}section.svelte-1kpskqx .planet .information h4.svelte-1kpskqx{display:flex;justify-content:center;align-items:center;width:90%}@media(min-width: 992px){section.svelte-1kpskqx .planet .information h1.svelte-1kpskqx{font-size:4rem}}section.svelte-1kpskqx .planet .information .text.svelte-1kpskqx{display:flex;justify-content:center;align-items:center;flex-direction:column;color:white;text-decoration:none;line-height:24px;margin-top:0.75rem}section.svelte-1kpskqx .planet .information .text a.svelte-1kpskqx{margin-top:0.5rem;color:#838391;font-weight:bold;text-decoration:underline}section.svelte-1kpskqx .planet .information .text a span.svelte-1kpskqx{font-weight:400;text-decoration:none}section.svelte-1kpskqx .planet .information .btns.svelte-1kpskqx{display:flex;justify-content:center;align-items:center;flex-direction:column;width:95%}@media(min-width: 768px) and (max-width: 991px){section.svelte-1kpskqx .planet .information .btns.svelte-1kpskqx{width:100%}}@media(min-width: 992px){section.svelte-1kpskqx .planet .information .btns.svelte-1kpskqx{width:100%}}.cards.svelte-1kpskqx.svelte-1kpskqx{display:grid;place-items:center;grid-template-columns:1fr;max-height:102%;margin-top:1.5rem;margin-bottom:1rem;width:100%}@media(min-width: 768px) and (max-width: 991px){.cards.svelte-1kpskqx.svelte-1kpskqx{grid-template-columns:repeat(2, 1fr)}}@media(min-width: 992px){.cards.svelte-1kpskqx.svelte-1kpskqx{grid-template-columns:repeat(4, 1fr)}}",
+      code: "section.svelte-qf2nuy.svelte-qf2nuy{display:grid;place-items:center;justify-content:center;width:100%;position:relative}section.svelte-qf2nuy .planet.svelte-qf2nuy{display:flex;justify-content:center;align-items:center;flex-direction:column;text-align:center;margin-top:0.5rem;height:100%;position:relative}@media(min-width: 992px){section.svelte-qf2nuy .planet.svelte-qf2nuy{display:grid;grid-template-columns:1fr 1fr;margin-bottom:1.5rem}}section.svelte-qf2nuy .planet .planetInfo.svelte-qf2nuy{display:grid}section.svelte-qf2nuy .planet .geology.svelte-qf2nuy{position:absolute;width:120px;top:21%}@media(min-width: 768px) and (max-width: 991px){section.svelte-qf2nuy .planet .geology.svelte-qf2nuy{top:28%}}@media(min-width: 992px){section.svelte-qf2nuy .planet .geology.svelte-qf2nuy{top:55%}}section.svelte-qf2nuy .planet img.svelte-qf2nuy{display:grid;max-width:18.75rem;margin-top:2rem;place-self:center}@media(min-width: 768px) and (max-width: 991px){section.svelte-qf2nuy .planet img.svelte-qf2nuy{max-width:20rem}}@media(min-width: 992px){section.svelte-qf2nuy .planet img.svelte-qf2nuy{max-width:23.75rem}}section.svelte-qf2nuy .planet .information.svelte-qf2nuy{display:grid;grid-template-columns:1fr;text-align:center;max-height:100%;margin-top:1rem}@media(min-width: 768px) and (max-width: 991px){section.svelte-qf2nuy .planet .information.svelte-qf2nuy{grid-template-columns:1fr 1fr}}section.svelte-qf2nuy .planet .information h4.svelte-qf2nuy{display:flex;justify-content:center;align-items:center;width:90%;min-height:11rem}@media(min-width: 992px){section.svelte-qf2nuy .planet .information h4.svelte-qf2nuy{min-height:4.5rem}}@media(min-width: 992px){section.svelte-qf2nuy .planet .information h1.svelte-qf2nuy{font-size:4rem}}section.svelte-qf2nuy .planet .information .text.svelte-qf2nuy{display:flex;justify-content:center;align-items:center;flex-direction:column;color:white;text-decoration:none;line-height:24px;margin-top:0.75rem}section.svelte-qf2nuy .planet .information .text a.svelte-qf2nuy{display:flex;margin-top:0.5rem;color:#838391;font-weight:bold;text-decoration:underline}section.svelte-qf2nuy .planet .information .text a span.svelte-qf2nuy{font-weight:400;text-decoration:none}section.svelte-qf2nuy .planet .information .text a img.svelte-qf2nuy{margin:0 0 0 0.5rem}section.svelte-qf2nuy .planet .information .btns.svelte-qf2nuy{display:flex;justify-content:center;align-items:center;flex-direction:column;width:95%}@media(min-width: 768px) and (max-width: 991px){section.svelte-qf2nuy .planet .information .btns.svelte-qf2nuy{width:100%}}@media(min-width: 992px){section.svelte-qf2nuy .planet .information .btns.svelte-qf2nuy{width:100%}}.cards.svelte-qf2nuy.svelte-qf2nuy{display:grid;place-items:center;grid-template-columns:1fr;max-height:102%;margin-top:1.5rem;margin-bottom:2.5rem;width:100%}@media(min-width: 768px) and (max-width: 991px){.cards.svelte-qf2nuy.svelte-qf2nuy{grid-template-columns:repeat(2, 1fr)}}@media(min-width: 992px){.cards.svelte-qf2nuy.svelte-qf2nuy{grid-template-columns:repeat(4, 1fr)}}",
       map: null
     };
     Routes = create_ssr_component(($$result, $$props, $$bindings, slots) => {
@@ -4966,31 +4966,19 @@ var init_index_ed1e6d29 = __esm({
           content: "structure",
           image: "internal"
         },
-        {
-          id: 2,
-          content: "geology",
-          image: "geology"
-        }
+        { id: 2, content: "geology" }
       ];
       let content = "overview";
       let imageType = "planet";
       async function getPlanetData(path2) {
         content = "overview";
         imageType = "planet";
-        const res = await fetch("./json/data.json");
-        const data = await res.json();
-        let info = data.find((item) => {
-          return item.name === path2;
-        });
-        return info;
+        return getData(path2);
       }
       $$result.css.add(css2);
       path = $globalStore.currentPlanet;
-      {
-        console.log(content);
-      }
       $$unsubscribe_globalStore();
-      return `<section class="${"svelte-1kpskqx"}">${function(__value) {
+      return `<section class="${"svelte-qf2nuy"}">${function(__value) {
         if (is_promise(__value)) {
           __value.then(null, noop);
           return `
@@ -4999,17 +4987,17 @@ var init_index_ed1e6d29 = __esm({
         }
         return function(planet) {
           return `
-        <div class="${"planet svelte-1kpskqx"}"><div class="${"planetInfo svelte-1kpskqx"}">${content !== "geology" ? `<img${add_attribute("src", planet.images[imageType], 0)}${add_attribute("alt", planet.name, 0)} class="${"svelte-1kpskqx"}">` : `<img${add_attribute("src", planet.images.planet, 0)}${add_attribute("alt", planet.name, 0)} class="${"svelte-1kpskqx"}">
-                <img class="${"geology svelte-1kpskqx"}"${add_attribute("src", planet.images.geology, 0)}${add_attribute("alt", planet.name, 0)}>`}</div>
+        <div class="${"planet svelte-qf2nuy"}"><div class="${"planetInfo svelte-qf2nuy"}">${content !== "geology" ? `<img${add_attribute("src", planet.images[imageType], 0)}${add_attribute("alt", planet.name, 0)} class="${"svelte-qf2nuy"}">` : `<img${add_attribute("src", planet.images.planet, 0)}${add_attribute("alt", planet.name, 0)} class="${"svelte-qf2nuy"}">
+                <img class="${"geology svelte-qf2nuy"}"${add_attribute("src", planet.images.geology, 0)}${add_attribute("alt", planet.name, 0)}>`}</div>
             
-            <div class="${"information svelte-1kpskqx"}"><div class="${"planet-info"}"><h1 class="${"svelte-1kpskqx"}">${escape(planet.name)}</h1>
-                    <div class="${"text svelte-1kpskqx"}"><h4 class="${"svelte-1kpskqx"}">${escape(planet[content].content)}</h4>
-                        <a${add_attribute("href", planet[content].source, 0)} class="${"svelte-1kpskqx"}"><span class="${"svelte-1kpskqx"}">Source:</span> Wikipedia</a></div></div>
-                <div class="${"btns svelte-1kpskqx"}">${each(details, (detail) => `${validate_component(Button, "Button").$$render($$result, {
+            <div class="${"information svelte-qf2nuy"}"><div class="${"planet-info"}"><h1 class="${"svelte-qf2nuy"}">${escape(planet.name)}</h1>
+                    <div class="${"text svelte-qf2nuy"}"><h4 class="${"svelte-qf2nuy"}">${escape(planet[content].content)}</h4>
+                        <a${add_attribute("href", planet[content].source, 0)} class="${"svelte-qf2nuy"}"><span class="${"svelte-qf2nuy"}">Source:</span> Wikipedia <img src="${"./assets/icon-source.svg"}" alt="${"icon"}" class="${"svelte-qf2nuy"}"></a></div></div>
+                <div class="${"btns svelte-qf2nuy"}">${each(details, (detail) => `${validate_component(Button, "Button").$$render($$result, {
             active: content === detail.content,
             text: detail.content
           }, {}, {})}`)}</div></div></div>
-        <div class="${"cards svelte-1kpskqx"}">${validate_component(Card, "Card").$$render($$result, {
+        <div class="${"cards svelte-qf2nuy"}">${validate_component(Card, "Card").$$render($$result, {
             title: "Rotation Time",
             value: planet.rotation
           }, {}, {})}
@@ -5032,7 +5020,7 @@ var init_index_ed1e6d29 = __esm({
   }
 });
 
-// .svelte-kit/output/server/chunks/app-5c876723.js
+// .svelte-kit/output/server/chunks/app-639914cd.js
 function get_single_valued_header(headers, key) {
   const value = headers[key];
   if (Array.isArray(value)) {
@@ -6328,9 +6316,9 @@ function init(settings = default_settings) {
     amp: false,
     dev: false,
     entry: {
-      file: assets + "/_app/start-03048d22.js",
+      file: assets + "/_app/start-9c978445.js",
       css: [assets + "/_app/assets/start-61d1577b.css"],
-      js: [assets + "/_app/start-03048d22.js", assets + "/_app/chunks/vendor-52eb7164.js"]
+      js: [assets + "/_app/start-9c978445.js", assets + "/_app/chunks/vendor-4afaf434.js"]
     },
     fetched: void 0,
     floc: false,
@@ -6374,8 +6362,8 @@ function render(request, {
   return respond({ ...request, host }, options, { prerender });
 }
 var __accessCheck, __privateGet, __privateAdd, __privateSet, _map, chars, unsafeChars, reserved, escaped$1, objectProtoOwnPropertyNames, subscriber_queue2, escape_json_string_in_html_dict, escape_html_attr_dict, s$1, s, absolute, ReadOnlyFormData, current_component, escaped, missing_component, on_destroy, css3, Root, base, assets, user_hooks, template, options, default_settings, empty, manifest, get_hooks, module_lookup, metadata_lookup;
-var init_app_5c876723 = __esm({
-  ".svelte-kit/output/server/chunks/app-5c876723.js"() {
+var init_app_639914cd = __esm({
+  ".svelte-kit/output/server/chunks/app-639914cd.js"() {
     init_shims();
     __accessCheck = (obj, member, msg) => {
       if (!member.has(obj))
@@ -6562,11 +6550,11 @@ ${``}`;
       externalFetch: hooks.externalFetch || fetch
     });
     module_lookup = {
-      "src/routes/__layout.svelte": () => Promise.resolve().then(() => (init_layout_c08c4ee3(), layout_c08c4ee3_exports)),
-      ".svelte-kit/build/components/error.svelte": () => Promise.resolve().then(() => (init_error_de4931e2(), error_de4931e2_exports)),
-      "src/routes/index.svelte": () => Promise.resolve().then(() => (init_index_ed1e6d29(), index_ed1e6d29_exports))
+      "src/routes/__layout.svelte": () => Promise.resolve().then(() => (init_layout_668eb479(), layout_668eb479_exports)),
+      ".svelte-kit/build/components/error.svelte": () => Promise.resolve().then(() => (init_error_0a7de075(), error_0a7de075_exports)),
+      "src/routes/index.svelte": () => Promise.resolve().then(() => (init_index_6e174332(), index_6e174332_exports))
     };
-    metadata_lookup = { "src/routes/__layout.svelte": { "entry": "pages/__layout.svelte-2592c572.js", "css": ["assets/pages/__layout.svelte-3182e1ad.css", "assets/globalStore-6af16862.css"], "js": ["pages/__layout.svelte-2592c572.js", "chunks/vendor-52eb7164.js", "chunks/globalStore-7e21280a.js"], "styles": [] }, ".svelte-kit/build/components/error.svelte": { "entry": "error.svelte-91bdb38a.js", "css": [], "js": ["error.svelte-91bdb38a.js", "chunks/vendor-52eb7164.js"], "styles": [] }, "src/routes/index.svelte": { "entry": "pages/index.svelte-b90198f8.js", "css": ["assets/pages/index.svelte-88bc8c78.css", "assets/globalStore-6af16862.css"], "js": ["pages/index.svelte-b90198f8.js", "chunks/vendor-52eb7164.js", "chunks/globalStore-7e21280a.js"], "styles": [] } };
+    metadata_lookup = { "src/routes/__layout.svelte": { "entry": "pages/__layout.svelte-bc17c9cb.js", "css": ["assets/pages/__layout.svelte-5e6f6152.css", "assets/functionStore-cd8d31bf.css"], "js": ["pages/__layout.svelte-bc17c9cb.js", "chunks/vendor-4afaf434.js", "chunks/functionStore-cdb15f78.js"], "styles": [] }, ".svelte-kit/build/components/error.svelte": { "entry": "error.svelte-3ceea69c.js", "css": [], "js": ["error.svelte-3ceea69c.js", "chunks/vendor-4afaf434.js"], "styles": [] }, "src/routes/index.svelte": { "entry": "pages/index.svelte-21c4c60a.js", "css": ["assets/pages/index.svelte-4080231e.css", "assets/functionStore-cd8d31bf.css"], "js": ["pages/index.svelte-21c4c60a.js", "chunks/vendor-4afaf434.js", "chunks/functionStore-cdb15f78.js"], "styles": [] } };
   }
 });
 
@@ -6578,7 +6566,7 @@ init_shims();
 
 // .svelte-kit/output/server/app.js
 init_shims();
-init_app_5c876723();
+init_app_639914cd();
 
 // .svelte-kit/netlify/entry.js
 init();
