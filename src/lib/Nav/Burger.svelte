@@ -25,6 +25,8 @@
         &.active {
             transform: rotate(360deg) translateX(10px) translateY(1rem);
             position: fixed;
+            top: 1rem;
+            right: .3rem;
             .line:nth-of-type(3) {
                 opacity: 0;
             }
