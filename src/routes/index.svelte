@@ -90,7 +90,7 @@ import { getData } from "../stores/functionStore";
                     width: 90%;
                     min-height: 11rem;
                     @include desktop{
-                        min-height: 4.5rem;
+                        min-height: 6rem;
                     }
                 }
 
@@ -124,13 +124,7 @@ import { getData } from "../stores/functionStore";
                 .btns {
                     @include centered;
                     flex-direction: column;
-                    width: 95%;
-                    @include tablet {
-                        width: 100%;
-                    }
-                    @include desktop {
-                        width: 100%;
-                    }
+                    width: 100%;
                 }
             }
         }

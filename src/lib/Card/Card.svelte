@@ -19,6 +19,9 @@
         font-weight: bold;
         margin-top: toRem(15);
         overflow: hidden;
+        @include tablet{
+            width: 16rem;
+        }
 
         .title{
             margin-top: toRem(11);

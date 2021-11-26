@@ -27,7 +27,7 @@ $: path = $globalStore.currentPlanet
     button,a{
         @include centered;
         padding: 1.2rem 3rem 1.2rem .5rem;
-        width: 13.5rem;
+        width: 14.5rem;
         background-color: transparent;
         color: white;
         font-size: 1.1rem;
@@ -43,7 +43,7 @@ $: path = $globalStore.currentPlanet
             width: 16rem;
         }
         @include desktop{
-            width: 23rem;
+            width: 20rem;
             margin-top: toRem(14);
 
         }

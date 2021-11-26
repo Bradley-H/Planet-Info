@@ -38,8 +38,7 @@
 
         h1{
             @include centered;
-            margin-top: 1rem;
-            margin-left: 1rem;
+            margin: 1rem auto 0 1rem;
             font-family: $secondaryFont;
             font-size: 2rem;
             color: white;

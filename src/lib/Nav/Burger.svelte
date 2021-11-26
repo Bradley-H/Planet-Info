@@ -12,7 +12,7 @@
         height: auto;
         cursor: pointer;
         transition: $primaryTransition;
-        transform-origin: center centere;
+        transform-origin: center center;
         width: toRem(34);
         z-index: 12;
         margin-left: auto;
@@ -24,9 +24,6 @@
         // ACTIVE STATE // - burger is active when menu is open
         &.active {
             transform: rotate(360deg) translateX(10px) translateY(1rem);
-            position: fixed;
-            top: 1rem;
-            right: .3rem;
             .line:nth-of-type(3) {
                 opacity: 0;
             }
