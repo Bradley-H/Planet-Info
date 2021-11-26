@@ -2,29 +2,35 @@
     // COMPONENTS //
     import NavLink from "./NavLink.svelte";
     import Burger from "./Burger.svelte";
-    // FUNCTIONS //
-    async function getData(){
-    const res = await fetch('./json/data.json')
-    const data = await res.json();
-    return data;
-}
     // SASS  //
     import "../../sass/styles.scss";
+
+    let planets = [
+        {id: 0, name: "Mercury"},
+        {id: 1, name: "Venus"},
+        {id: 2, name: "Earth"},
+        {id: 3, name: "Mars"},
+        {id: 4, name: "Jupiter"},
+        {id: 5, name: "Saturn"},
+        {id: 6, name: "Uranus"},
+        {id: 7, name: "Neptune"},
+    ]
 </script>
 
 <style lang="scss">
     @import "../../sass/util/index.scss";
 
     nav{
-        display: flex;
+        @include centered;
         background-color: $backgroundColor;
         background-image: url("/assets/background-stars.svg");
-        flex-direction: column;
         width: 100%;
         border-bottom: 1px solid $subHeading;
-        padding-bottom: 1.5rem;
         overflow: hidden;
         height: $navHeight;
+        @include tabletUp{
+            justify-content: flex-start;
+        }
         @include desktop{
             flex-direction: row;
             padding-bottom: 1rem;
@@ -33,6 +39,7 @@
         h1{
             @include centered;
             margin-top: 1rem;
+            margin-left: 1rem;
             font-family: $secondaryFont;
             font-size: 2rem;
             color: white;
@@ -49,6 +56,8 @@
             margin-top: 1.5rem;
             @include tabletUp{
                 display: flex;
+                margin-left: auto;
+                margin-right: 1rem;
             }
             @include tablet{
                 justify-content: space-evenly;
@@ -60,17 +69,12 @@
     }
 </style>
 
-<Burger/>
 <nav>
     <h1>THE PLANETS</h1>
     <div class="planet-links">
-        {#await getData()}
-        <p>Getting Planets.....</p>
-    {:then planets}
-        {#each planets as planet}
-            <NavLink text={planet.name}/>
-        {/each}
-    {/await}
+            {#each planets as planet}
+                <NavLink text={planet.name} />
+            {/each}
     </div>
+    <Burger />
 </nav>
-

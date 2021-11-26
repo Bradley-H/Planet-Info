@@ -3,7 +3,13 @@
     import { globalStore } from "../../stores/globalStore";
 
     function ToggleActive() {
-        $globalStore.ModalActive = false;
+        $globalStore.ModalActive = !$globalStore.ModalActive;
+        if ($globalStore.ModalActive) {
+            document.querySelector("body").style.overflow = "hidden";
+        } else {
+            document.querySelector("body").style.overflow = "unset";
+
+        }
     }
 
 </script>
@@ -31,11 +37,14 @@
             margin-bottom: 1rem;
         }
         &-body {
-            height: 100vh;
+            height: 92vh;
             margin-top: 1.5rem;
             display: grid;
             grid-template-columns: 1fr;
             align-items: flex-start;
+        }
+        &-content{
+            margin-top: 3rem;
         }
 
         button {

@@ -6,14 +6,13 @@
     import Card from "$lib/Card/Card.svelte";
     // STORES //
     import { globalStore } from "../stores/globalStore";
+import { getData } from "../stores/functionStore";
     // OBJECTS //
     let details = [  // what information to be displayed //
         { id: 0, content: "overview", image: "planet"},
         { id: 1, content: "structure", image: "internal" },
-        { id: 2, content: "geology", image: "geology" },
+        { id: 2, content: "geology" },
     ];
-
-
 
     // REACTIVE VALUES //
     $: path = $globalStore.currentPlanet; // shorten the markup
@@ -26,15 +25,8 @@
     async function getPlanetData(path) {
         content = "overview";
         imageType = "planet";
-        const res = await fetch("./json/data.json");
-        const data = await res.json();
-        let info = data.find((item) => {
-            return item.name === path;
-        });
-        return info;
+        return getData(path);
     }
-
-    $: console.log(content);
 </script>
 
 <style lang="scss">
@@ -47,10 +39,8 @@
         width: 100%;
         position: relative;
         .planet {
-            display: flex;
+            @include centered;
             flex-direction: column;
-            align-items: center;
-            justify-content: center;
             text-align: center;
             margin-top: 0.5rem;
             height: 100%;
@@ -66,7 +56,7 @@
             .geology {
                 position: absolute;
                     width: 120px;
-                    top: 22%;
+                    top: 21%;
                     @include tablet{
                         top: 28%
                     }
@@ -98,6 +88,10 @@
                 h4 {
                     @include centered;
                     width: 90%;
+                    min-height: 11rem;
+                    @include desktop{
+                        min-height: 4.5rem;
+                    }
                 }
 
                 h1 {
@@ -113,6 +107,7 @@
                     line-height: 24px;
                     margin-top: 0.75rem;
                     a {
+                        display: flex;
                         margin-top: 0.5rem;
                         color: $subHeading;
                         font-weight: bold;
@@ -120,6 +115,9 @@
                         span {
                             font-weight: 400;
                             text-decoration: none;
+                        }
+                        img{
+                            margin: 0 0 0 .5rem;;
                         }
                     }
                 }
@@ -144,7 +142,7 @@
         grid-template-columns: 1fr;
         max-height: 102%;
         margin-top: 1.5rem;
-        margin-bottom: 1rem;
+        margin-bottom: 2.5rem;
         width: 100%;
         @include tablet {
             grid-template-columns: repeat(2, 1fr);
@@ -161,21 +159,21 @@
         <p></p>
     {:then planet}
         <div class="planet">
-            <div class="planetInfo">
+            <div class="planetInfo" in:fly={{duration: 555, x: -350, delay: 800}}>
                 {#if content !== "geology"}
                     <img src={planet.images[imageType]} alt="{planet.name}" />
                 {:else}
-                    <img src={planet.images.planet} alt="{planet.name}" />
-                    <img class="geology" src={planet.images.geology} alt="{planet.name}" />
+                <img src={planet.images.planet} alt="{planet.name}" />
+                <img in:fly={{duration: 1000, delay: 100, y: 100}} class="geology" src={planet.images.geology} alt="{planet.name}" />
                 {/if}
             </div>
             
             <div class="information">
                 <div class="planet-info">
-                    <h1>{planet.name}</h1>
-                    <div class="text">
+                    <h1 in:fade={{delay: 1000}} >{planet.name}</h1>
+                    <div class="text" in:fade={{delay: 1000}}>
                         <h4>{planet[content].content}</h4>
-                        <a href={planet[content].source}><span>Source:</span> Wikipedia</a>
+                        <a href={planet[content].source}><span>Source:</span> Wikipedia <img src="./assets/icon-source.svg" alt="icon"></a>
                     </div>
                 </div>
                 <div class="btns">

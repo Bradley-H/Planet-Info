@@ -27,7 +27,7 @@ $: path = $globalStore.currentPlanet
     button,a{
         @include centered;
         padding: 1.2rem 3rem 1.2rem .5rem;
-        max-width: 18rem;
+        width: 13.5rem;
         background-color: transparent;
         color: white;
         font-size: 1.1rem;
@@ -39,8 +39,13 @@ $: path = $globalStore.currentPlanet
         text-transform: capitalize;
         z-index: 3;
         margin-top: toRem(14);
+        @include tablet{
+            width: 16rem;
+        }
         @include desktop{
             width: 23rem;
+            margin-top: toRem(14);
+
         }
         &:hover{
             background-color: $subHeading;

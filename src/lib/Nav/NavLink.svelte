@@ -4,7 +4,7 @@ import { globalStore } from "../../stores/globalStore";
     export let text;
     import "../../sass/styles.scss";
 
-    $: path = $globalStore.currentPlanet;
+    $: path = $globalStore.currentPlanet; //shorten the markup //
 </script>
 
 <style lang="scss">
@@ -25,7 +25,7 @@ import { globalStore } from "../../stores/globalStore";
         background-color: transparent;
         border: none;
         cursor: pointer;
-        margin-right: toRem(10);
+        margin-right: toRem(13);
         text-decoration: none;
         font-weight: bold;
         margin-bottom: 0.5rem;
@@ -53,7 +53,7 @@ import { globalStore } from "../../stores/globalStore";
                 transition: $primaryTransition;
             }
             &.#{$planet}.active::after {
-                bottom: -.3rem;
+                bottom: -.5rem;
                 width: 100%;
 
             }
@@ -68,7 +68,7 @@ import { globalStore } from "../../stores/globalStore";
             bottom: -2.5rem;
         }
         to {
-            bottom: -.5rem;
+            bottom: -1rem;
         }
         
     }
