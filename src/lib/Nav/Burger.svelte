@@ -1,6 +1,17 @@
 <script>
     import { globalStore } from "../../stores/globalStore";
     import Modal from "./Modal.svelte";
+
+    function active(){
+        $globalStore.ModalActive = !$globalStore.ModalActive
+
+        if($globalStore.ModalActive){
+            document.querySelector("body").style.overflow = "hidden"
+        } else {
+            document.querySelector("body").style.overflow = "unset"
+
+        }
+    }
 </script>
 
 
@@ -12,11 +23,9 @@
         height: auto;
         cursor: pointer;
         transition: $primaryTransition;
-        transform-origin: center center;
         width: toRem(34);
         z-index: 12;
-        margin-left: auto;
-        margin-right: 1rem;
+        margin: 0 1rem 0 auto;
         @include tabletUp{
             display: none;
             margin: 0;
@@ -48,7 +57,7 @@
 
 <div class="burger"
     class:active={$globalStore.ModalActive}
-    on:click={() => ($globalStore.ModalActive = !$globalStore.ModalActive)}>
+    on:click={active}>
     <div class="line" />
     <div class="line" />
     <div class="line" />

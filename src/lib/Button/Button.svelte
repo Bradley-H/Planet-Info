@@ -5,7 +5,7 @@
 import { globalStore } from '../../stores/globalStore';
     import "../../sass/styles.scss";
 
-$: path = $globalStore.currentPlanet
+$: path = $globalStore.currentPlanet; //shorten the markup
 </script>
 
 
@@ -28,7 +28,6 @@ $: path = $globalStore.currentPlanet
         @include centered;
         padding: 1.2rem 3rem 1.2rem .5rem;
         width: 14.5rem;
-        background-color: transparent;
         color: white;
         font-size: 1.1rem;
         border: 1px solid $subHeading;
@@ -44,7 +43,6 @@ $: path = $globalStore.currentPlanet
         }
         @include desktop{
             width: 20rem;
-            margin-top: toRem(14);
 
         }
         &:hover{

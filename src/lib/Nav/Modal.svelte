@@ -19,13 +19,11 @@
     .modal {
         display: flex;
         position: fixed;
-        bottom: 0;
-        left: 0;
+        inset: 0;
         min-width: 110%;
         height: 100vh;
         background: lighten($color: $backgroundColor, $amount: 1);
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        z-index: 2;
         justify-content: center;
         transform: translateX(-100%);
         transition: $primaryTransition;
@@ -37,11 +35,11 @@
             margin-bottom: 1rem;
         }
         &-body {
-            height: 92vh;
-            margin-top: 1.5rem;
             display: grid;
             grid-template-columns: 1fr;
             align-items: flex-start;
+            height: 92vh;
+            margin-top: 1.5rem;
         }
         &-content{
             margin-top: 3rem;

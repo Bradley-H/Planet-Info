@@ -44,8 +44,7 @@
             color: white;
             @include desktop{
                 font-size: 2.2rem;
-                margin-left: 1rem;
-                margin-top: 1.5rem;
+                margin: 1.5rem 0 0 1rem;
             }
         }
 
@@ -55,14 +54,13 @@
             margin-top: 1.5rem;
             @include tabletUp{
                 display: flex;
-                margin-left: auto;
-                margin-right: 1rem;
+                margin: 1rem 1rem 0 auto;
             }
             @include tablet{
                 justify-content: space-evenly;
             }
             @include desktop{
-                margin-left: auto;
+                margin: 1.5rem 0 0 auto;
         }
     }
     }
@@ -71,7 +69,7 @@
 <nav>
     <h1>THE PLANETS</h1>
     <div class="planet-links">
-            {#each planets as planet}
+            {#each planets as planet (planet.id)}
                 <NavLink text={planet.name} />
             {/each}
     </div>

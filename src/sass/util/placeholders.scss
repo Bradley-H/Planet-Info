@@ -1,0 +1,17 @@
+%navLink{
+    content: "";
+    position: absolute;
+    left: 0;
+    height: 4px;
+    transition: $primaryTransition;
+    width: 100%;
+}
+
+%bottom5{
+    bottom: -.5rem
+}
+
+
+%bottom35{
+    bottom: -3.5rem
+}

@@ -8,12 +8,17 @@
 
 <style lang="scss">
     @import "../../sass/util/index";
+
+    .title, .content{
+        text-align: center;
+        width: 100%;
+    }
+
     .card{
         display: flex;
         flex-direction: column;
         text-align: start;
         width: 14.5rem;
-        max-width: 17rem;
         height: 5rem;
         border: 1px solid $subHeading;
         font-weight: bold;
@@ -25,8 +30,6 @@
 
         .title{
             margin-top: toRem(11);
-            text-align: center;
-            width: 100%;
             p{
                 color: $subHeading;
             }
@@ -34,8 +37,6 @@
 
         .content{
             margin-top: toRem(9);
-            text-align: center;
-            width: 100%;
             h4{
                 font-size: toRem(25);
             }

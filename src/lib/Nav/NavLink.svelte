@@ -45,21 +45,14 @@ import { globalStore } from "../../stores/globalStore";
             }
             &.#{$planet}.active::after,
             &.#{$planet}.nonActive::after{
-                content: "";
-                position: absolute;
-                left: 0;
-                height: 4px;
+                @extend %navLink;
                 background: $color;
-                transition: $primaryTransition;
             }
             &.#{$planet}.active::after {
-                bottom: -.5rem;
-                width: 100%;
-
+                @extend %bottom5;
             }
             &.#{$planet}.nonActive::after {
-                bottom: -3.5rem;
-                width: 100%;
+                @extend %bottom35;
             }
         }
 

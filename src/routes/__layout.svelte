@@ -11,9 +11,6 @@
         display: flex;
         flex-direction: column;
         width: 100%;
-        background-image: url("./assets/background-stars.svg");
-  background-color: $backgroundColor;
-  object-fit: cover;
     }
 </style>
 
