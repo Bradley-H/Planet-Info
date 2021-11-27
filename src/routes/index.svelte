@@ -57,12 +57,12 @@
             .geology {
                 position: absolute;
                 width: 120px;
-                top: 21%;
+                top: 18%;
                 @include tablet {
-                    top: 28%;
+                    top: 23%;
                 }
                 @include desktop {
-                    top: 55%;
+                    top: 45%;
                 }
             }
             img {

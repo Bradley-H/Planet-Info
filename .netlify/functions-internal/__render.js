@@ -4696,7 +4696,7 @@ var init_shims = __esm({
   }
 });
 
-// .svelte-kit/output/server/chunks/globalStore-d4b35246.js
+// .svelte-kit/output/server/chunks/globalStore-226b1aa1.js
 function writable(value, start = noop) {
   let stop;
   const subscribers = new Set();
@@ -4739,10 +4739,10 @@ function writable(value, start = noop) {
   return { set, update, subscribe: subscribe2 };
 }
 var subscriber_queue, globalStore;
-var init_globalStore_d4b35246 = __esm({
-  ".svelte-kit/output/server/chunks/globalStore-d4b35246.js"() {
+var init_globalStore_226b1aa1 = __esm({
+  ".svelte-kit/output/server/chunks/globalStore-226b1aa1.js"() {
     init_shims();
-    init_app_c5723c4b();
+    init_app_de19722e();
     subscriber_queue = [];
     globalStore = writable({
       currentPlanet: "Earth",
@@ -4752,17 +4752,17 @@ var init_globalStore_d4b35246 = __esm({
   }
 });
 
-// .svelte-kit/output/server/chunks/__layout-29e7e66f.js
-var layout_29e7e66f_exports = {};
-__export(layout_29e7e66f_exports, {
+// .svelte-kit/output/server/chunks/__layout-2c41b095.js
+var layout_2c41b095_exports = {};
+__export(layout_2c41b095_exports, {
   default: () => _layout
 });
 var css$4, NavLink, planets, css$3, Modal, css$2, Burger, css$1, Nav, css, _layout;
-var init_layout_29e7e66f = __esm({
-  ".svelte-kit/output/server/chunks/__layout-29e7e66f.js"() {
+var init_layout_2c41b095 = __esm({
+  ".svelte-kit/output/server/chunks/__layout-2c41b095.js"() {
     init_shims();
-    init_app_c5723c4b();
-    init_globalStore_d4b35246();
+    init_app_de19722e();
+    init_globalStore_226b1aa1();
     css$4 = {
       code: 'button.Neptune.active.svelte-fmzi8b::after,button.Neptune.nonActive.svelte-fmzi8b::after,button.Uranus.active.svelte-fmzi8b::after,button.Uranus.nonActive.svelte-fmzi8b::after,button.Saturn.active.svelte-fmzi8b::after,button.Saturn.nonActive.svelte-fmzi8b::after,button.Jupiter.active.svelte-fmzi8b::after,button.Jupiter.nonActive.svelte-fmzi8b::after,button.Mars.active.svelte-fmzi8b::after,button.Mars.nonActive.svelte-fmzi8b::after,button.Earth.active.svelte-fmzi8b::after,button.Earth.nonActive.svelte-fmzi8b::after,button.Venus.active.svelte-fmzi8b::after,button.Venus.nonActive.svelte-fmzi8b::after,button.Mercury.active.svelte-fmzi8b::after,button.Mercury.nonActive.svelte-fmzi8b::after{content:"";position:absolute;left:0;height:4px;transition:all 0.8s ease-in-out}button.Neptune.active.svelte-fmzi8b::after,button.Neptune.nonActive.svelte-fmzi8b::after,button.Uranus.active.svelte-fmzi8b::after,button.Uranus.nonActive.svelte-fmzi8b::after,button.Saturn.active.svelte-fmzi8b::after,button.Saturn.nonActive.svelte-fmzi8b::after,button.Jupiter.active.svelte-fmzi8b::after,button.Jupiter.nonActive.svelte-fmzi8b::after,button.Mars.active.svelte-fmzi8b::after,button.Mars.nonActive.svelte-fmzi8b::after,button.Earth.active.svelte-fmzi8b::after,button.Earth.nonActive.svelte-fmzi8b::after,button.Venus.active.svelte-fmzi8b::after,button.Venus.nonActive.svelte-fmzi8b::after,button.Mercury.active.svelte-fmzi8b::after,button.Mercury.nonActive.svelte-fmzi8b::after{width:100%}button.Neptune.active.svelte-fmzi8b::after,button.Uranus.active.svelte-fmzi8b::after,button.Saturn.active.svelte-fmzi8b::after,button.Jupiter.active.svelte-fmzi8b::after,button.Mars.active.svelte-fmzi8b::after,button.Earth.active.svelte-fmzi8b::after,button.Venus.active.svelte-fmzi8b::after,button.Mercury.active.svelte-fmzi8b::after{bottom:-0.5rem}button.Neptune.nonActive.svelte-fmzi8b::after,button.Uranus.nonActive.svelte-fmzi8b::after,button.Saturn.nonActive.svelte-fmzi8b::after,button.Jupiter.nonActive.svelte-fmzi8b::after,button.Mars.nonActive.svelte-fmzi8b::after,button.Earth.nonActive.svelte-fmzi8b::after,button.Venus.nonActive.svelte-fmzi8b::after,button.Mercury.nonActive.svelte-fmzi8b::after{bottom:-3.5rem}button.svelte-fmzi8b{color:#838391;background-color:transparent;border:none;cursor:pointer;margin-right:0.8125rem;text-decoration:none;font-weight:bold;margin-bottom:0.5rem;transition:all 0.8s ease-in-out;position:relative}@media(min-width: 768px) and (max-width: 991px){button.svelte-fmzi8b{font-size:0.79rem}}@media(min-width: 992px){button.svelte-fmzi8b{margin-right:2.25rem;font-size:0.85rem}}button.Mercury.svelte-fmzi8b:hover,button.Mercury.active.svelte-fmzi8b{color:#419db9}button.Mercury.active.svelte-fmzi8b::after,button.Mercury.nonActive.svelte-fmzi8b::after{background:#419db9}button.Venus.svelte-fmzi8b:hover,button.Venus.active.svelte-fmzi8b{color:#eda44a}button.Venus.active.svelte-fmzi8b::after,button.Venus.nonActive.svelte-fmzi8b::after{background:#eda44a}button.Earth.svelte-fmzi8b:hover,button.Earth.active.svelte-fmzi8b{color:#6f2ed6}button.Earth.active.svelte-fmzi8b::after,button.Earth.nonActive.svelte-fmzi8b::after{background:#6f2ed6}button.Mars.svelte-fmzi8b:hover,button.Mars.active.svelte-fmzi8b{color:#d15533}button.Mars.active.svelte-fmzi8b::after,button.Mars.nonActive.svelte-fmzi8b::after{background:#d15533}button.Jupiter.svelte-fmzi8b:hover,button.Jupiter.active.svelte-fmzi8b{color:#d93b36}button.Jupiter.active.svelte-fmzi8b::after,button.Jupiter.nonActive.svelte-fmzi8b::after{background:#d93b36}button.Saturn.svelte-fmzi8b:hover,button.Saturn.active.svelte-fmzi8b{color:#cb5020}button.Saturn.active.svelte-fmzi8b::after,button.Saturn.nonActive.svelte-fmzi8b::after{background:#cb5020}button.Uranus.svelte-fmzi8b:hover,button.Uranus.active.svelte-fmzi8b{color:#1ec2a4}button.Uranus.active.svelte-fmzi8b::after,button.Uranus.nonActive.svelte-fmzi8b::after{background:#1ec2a4}button.Neptune.svelte-fmzi8b:hover,button.Neptune.active.svelte-fmzi8b{color:#2d68f0}button.Neptune.active.svelte-fmzi8b::after,button.Neptune.nonActive.svelte-fmzi8b::after{background:#2d68f0}@keyframes svelte-fmzi8b-NavLinkActiveAnimation{from{bottom:-2.5rem}to{bottom:-1rem}}@keyframes svelte-fmzi8b-NavLinkActiveAnimationReverse{from{bottom:-0.5rem;opacity:1}to{bottom:-5.5rem;opacity:0}}',
       map: null
@@ -4843,9 +4843,9 @@ ${validate_component(Modal, "Modal").$$render($$result, {}, {}, {})}`;
   }
 });
 
-// .svelte-kit/output/server/chunks/error-cad1df51.js
-var error_cad1df51_exports = {};
-__export(error_cad1df51_exports, {
+// .svelte-kit/output/server/chunks/error-60788dba.js
+var error_60788dba_exports = {};
+__export(error_60788dba_exports, {
   default: () => Error2,
   load: () => load
 });
@@ -4853,10 +4853,10 @@ function load({ error: error2, status }) {
   return { props: { error: error2, status } };
 }
 var Error2;
-var init_error_cad1df51 = __esm({
-  ".svelte-kit/output/server/chunks/error-cad1df51.js"() {
+var init_error_60788dba = __esm({
+  ".svelte-kit/output/server/chunks/error-60788dba.js"() {
     init_shims();
-    init_app_c5723c4b();
+    init_app_de19722e();
     Error2 = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       let { status } = $$props;
       let { error: error2 } = $$props;
@@ -4876,9 +4876,9 @@ ${error2.stack ? `<pre>${escape(error2.stack)}</pre>` : ``}`;
   }
 });
 
-// .svelte-kit/output/server/chunks/index-15cc4f55.js
-var index_15cc4f55_exports = {};
-__export(index_15cc4f55_exports, {
+// .svelte-kit/output/server/chunks/index-9a3025fa.js
+var index_9a3025fa_exports = {};
+__export(index_9a3025fa_exports, {
   default: () => Routes
 });
 async function getData(path) {
@@ -4894,11 +4894,11 @@ async function getData(path) {
   }
 }
 var css$22, Button, css$12, Card, css2, Routes;
-var init_index_15cc4f55 = __esm({
-  ".svelte-kit/output/server/chunks/index-15cc4f55.js"() {
+var init_index_9a3025fa = __esm({
+  ".svelte-kit/output/server/chunks/index-9a3025fa.js"() {
     init_shims();
-    init_app_c5723c4b();
-    init_globalStore_d4b35246();
+    init_app_de19722e();
+    init_globalStore_226b1aa1();
     css$22 = {
       code: "button.svelte-v840nv,a.svelte-v840nv{display:flex;justify-content:center;align-items:center;padding:1.2rem 3rem 1.2rem 0.5rem;width:14.5rem;color:white;font-size:1.1rem;border:1px solid #838391;transition:all 0.8s ease-in-out;text-decoration:none;min-width:155px;cursor:pointer;text-transform:capitalize;z-index:3;margin-top:0.875rem}@media(min-width: 768px) and (max-width: 991px){button.svelte-v840nv,a.svelte-v840nv{width:16rem}}@media(min-width: 992px){button.svelte-v840nv,a.svelte-v840nv{width:20rem}}button.svelte-v840nv:hover,a.svelte-v840nv:hover{background-color:#838391;color:white}button.Mercury.active.svelte-v840nv,a.Mercury.active.svelte-v840nv{background-color:#419db9}button.Venus.active.svelte-v840nv,a.Venus.active.svelte-v840nv{background-color:#eda44a}button.Earth.active.svelte-v840nv,a.Earth.active.svelte-v840nv{background-color:#6f2ed6}button.Mars.active.svelte-v840nv,a.Mars.active.svelte-v840nv{background-color:#d15533}button.Jupiter.active.svelte-v840nv,a.Jupiter.active.svelte-v840nv{background-color:#d93b36}button.Saturn.active.svelte-v840nv,a.Saturn.active.svelte-v840nv{background-color:#cb5020}button.Uranus.active.svelte-v840nv,a.Uranus.active.svelte-v840nv{background-color:#1ec2a4}button.Neptune.active.svelte-v840nv,a.Neptune.active.svelte-v840nv{background-color:#2d68f0}",
       map: null
@@ -4937,7 +4937,7 @@ var init_index_15cc4f55 = __esm({
     <div class="${"content svelte-19ozrsg"}"><h4 class="${"svelte-19ozrsg"}">${escape(value)}</h4></div></div>`;
     });
     css2 = {
-      code: "section.svelte-1nxew9h.svelte-1nxew9h,.planetInfo.svelte-1nxew9h.svelte-1nxew9h,img.svelte-1nxew9h.svelte-1nxew9h,.information.svelte-1nxew9h.svelte-1nxew9h,.cards.svelte-1nxew9h.svelte-1nxew9h{display:grid}section.svelte-1nxew9h.svelte-1nxew9h{place-items:center;justify-content:center;width:100%;position:relative}section.svelte-1nxew9h .planet.svelte-1nxew9h{display:flex;justify-content:center;align-items:center;flex-direction:column;text-align:center;margin-top:0.5rem;height:100%;position:relative}@media(min-width: 992px){section.svelte-1nxew9h .planet.svelte-1nxew9h{display:grid;grid-template-columns:1fr 1fr;margin-bottom:1.5rem}}section.svelte-1nxew9h .planet .geology.svelte-1nxew9h{position:absolute;width:120px;top:21%}@media(min-width: 768px) and (max-width: 991px){section.svelte-1nxew9h .planet .geology.svelte-1nxew9h{top:28%}}@media(min-width: 992px){section.svelte-1nxew9h .planet .geology.svelte-1nxew9h{top:55%}}section.svelte-1nxew9h .planet img.svelte-1nxew9h{max-width:18.75rem;margin-top:2rem;place-self:center}@media(min-width: 768px) and (max-width: 991px){section.svelte-1nxew9h .planet img.svelte-1nxew9h{max-width:20rem}}@media(min-width: 992px){section.svelte-1nxew9h .planet img.svelte-1nxew9h{max-width:23.75rem}}section.svelte-1nxew9h .planet .information.svelte-1nxew9h{grid-template-columns:1fr;text-align:center;max-height:100%;margin-top:1rem}@media(min-width: 768px) and (max-width: 991px){section.svelte-1nxew9h .planet .information.svelte-1nxew9h{grid-template-columns:1fr 1fr}}section.svelte-1nxew9h .planet .information h4.svelte-1nxew9h{display:flex;justify-content:center;align-items:center;width:90%;min-height:11rem}@media(min-width: 992px){section.svelte-1nxew9h .planet .information h4.svelte-1nxew9h{min-height:6rem}}@media(min-width: 992px){section.svelte-1nxew9h .planet .information h1.svelte-1nxew9h{font-size:4rem}}section.svelte-1nxew9h .planet .information .text.svelte-1nxew9h{display:flex;justify-content:center;align-items:center;flex-direction:column;color:white;text-decoration:none;line-height:24px;margin-top:0.75rem}section.svelte-1nxew9h .planet .information .text a.svelte-1nxew9h{display:flex;margin-top:0.5rem;color:#838391;font-weight:bold;text-decoration:underline}section.svelte-1nxew9h .planet .information .text a span.svelte-1nxew9h{font-weight:400;text-decoration:none}section.svelte-1nxew9h .planet .information .text a img.svelte-1nxew9h{margin:0 0 0 0.5rem}section.svelte-1nxew9h .planet .information .btns.svelte-1nxew9h{display:flex;justify-content:center;align-items:center;flex-direction:column;width:100%}.cards.svelte-1nxew9h.svelte-1nxew9h{place-items:center;grid-template-columns:1fr;max-height:102%;margin-top:1.5rem;margin-bottom:2.5rem;width:100%}@media(min-width: 768px) and (max-width: 991px){.cards.svelte-1nxew9h.svelte-1nxew9h{grid-template-columns:repeat(2, 1fr)}}@media(min-width: 992px){.cards.svelte-1nxew9h.svelte-1nxew9h{grid-template-columns:repeat(4, 1fr)}}",
+      code: "section.svelte-1ct4qlr.svelte-1ct4qlr,.planetInfo.svelte-1ct4qlr.svelte-1ct4qlr,img.svelte-1ct4qlr.svelte-1ct4qlr,.information.svelte-1ct4qlr.svelte-1ct4qlr,.cards.svelte-1ct4qlr.svelte-1ct4qlr{display:grid}section.svelte-1ct4qlr.svelte-1ct4qlr{place-items:center;justify-content:center;width:100%;position:relative}section.svelte-1ct4qlr .planet.svelte-1ct4qlr{display:flex;justify-content:center;align-items:center;flex-direction:column;text-align:center;margin-top:0.5rem;height:100%;position:relative}@media(min-width: 992px){section.svelte-1ct4qlr .planet.svelte-1ct4qlr{display:grid;grid-template-columns:1fr 1fr;margin-bottom:1.5rem}}section.svelte-1ct4qlr .planet .geology.svelte-1ct4qlr{position:absolute;width:120px;top:18%}@media(min-width: 768px) and (max-width: 991px){section.svelte-1ct4qlr .planet .geology.svelte-1ct4qlr{top:23%}}@media(min-width: 992px){section.svelte-1ct4qlr .planet .geology.svelte-1ct4qlr{top:45%}}section.svelte-1ct4qlr .planet img.svelte-1ct4qlr{max-width:18.75rem;margin-top:2rem;place-self:center}@media(min-width: 768px) and (max-width: 991px){section.svelte-1ct4qlr .planet img.svelte-1ct4qlr{max-width:20rem}}@media(min-width: 992px){section.svelte-1ct4qlr .planet img.svelte-1ct4qlr{max-width:23.75rem}}section.svelte-1ct4qlr .planet .information.svelte-1ct4qlr{grid-template-columns:1fr;text-align:center;max-height:100%;margin-top:1rem}@media(min-width: 768px) and (max-width: 991px){section.svelte-1ct4qlr .planet .information.svelte-1ct4qlr{grid-template-columns:1fr 1fr}}section.svelte-1ct4qlr .planet .information h4.svelte-1ct4qlr{display:flex;justify-content:center;align-items:center;width:90%;min-height:11rem}@media(min-width: 992px){section.svelte-1ct4qlr .planet .information h4.svelte-1ct4qlr{min-height:6rem}}@media(min-width: 992px){section.svelte-1ct4qlr .planet .information h1.svelte-1ct4qlr{font-size:4rem}}section.svelte-1ct4qlr .planet .information .text.svelte-1ct4qlr{display:flex;justify-content:center;align-items:center;flex-direction:column;color:white;text-decoration:none;line-height:24px;margin-top:0.75rem}section.svelte-1ct4qlr .planet .information .text a.svelte-1ct4qlr{display:flex;margin-top:0.5rem;color:#838391;font-weight:bold;text-decoration:underline}section.svelte-1ct4qlr .planet .information .text a span.svelte-1ct4qlr{font-weight:400;text-decoration:none}section.svelte-1ct4qlr .planet .information .text a img.svelte-1ct4qlr{margin:0 0 0 0.5rem}section.svelte-1ct4qlr .planet .information .btns.svelte-1ct4qlr{display:flex;justify-content:center;align-items:center;flex-direction:column;width:100%}.cards.svelte-1ct4qlr.svelte-1ct4qlr{place-items:center;grid-template-columns:1fr;max-height:102%;margin-top:1.5rem;margin-bottom:2.5rem;width:100%}@media(min-width: 768px) and (max-width: 991px){.cards.svelte-1ct4qlr.svelte-1ct4qlr{grid-template-columns:repeat(2, 1fr)}}@media(min-width: 992px){.cards.svelte-1ct4qlr.svelte-1ct4qlr{grid-template-columns:repeat(4, 1fr)}}",
       map: null
     };
     Routes = create_ssr_component(($$result, $$props, $$bindings, slots) => {
@@ -4967,7 +4967,7 @@ var init_index_15cc4f55 = __esm({
       $$result.css.add(css2);
       path = $globalStore.currentPlanet;
       $$unsubscribe_globalStore();
-      return `<section class="${"svelte-1nxew9h"}">${function(__value) {
+      return `<section class="${"svelte-1ct4qlr"}">${function(__value) {
         if (is_promise(__value)) {
           __value.then(null, noop);
           return `
@@ -4976,18 +4976,18 @@ var init_index_15cc4f55 = __esm({
         }
         return function(planet) {
           return `
-        <div class="${"planet svelte-1nxew9h"}"><div class="${"planetInfo svelte-1nxew9h"}">${content !== "geology" ? `<img${add_attribute("src", planet.images[imageType], 0)}${add_attribute("alt", planet.name, 0)} class="${"svelte-1nxew9h"}">` : `<img${add_attribute("src", planet.images.planet, 0)}${add_attribute("alt", planet.name, 0)} class="${"svelte-1nxew9h"}">
-                    <img class="${"geology svelte-1nxew9h"}"${add_attribute("src", planet.images.geology, 0)}${add_attribute("alt", planet.name, 0)}>`}</div>
+        <div class="${"planet svelte-1ct4qlr"}"><div class="${"planetInfo svelte-1ct4qlr"}">${content !== "geology" ? `<img${add_attribute("src", planet.images[imageType], 0)}${add_attribute("alt", planet.name, 0)} class="${"svelte-1ct4qlr"}">` : `<img${add_attribute("src", planet.images.planet, 0)}${add_attribute("alt", planet.name, 0)} class="${"svelte-1ct4qlr"}">
+                    <img class="${"geology svelte-1ct4qlr"}"${add_attribute("src", planet.images.geology, 0)}${add_attribute("alt", planet.name, 0)}>`}</div>
 
-            <div class="${"information svelte-1nxew9h"}"><div class="${"planet-info"}"><h1 class="${"svelte-1nxew9h"}">${escape(planet.name)}</h1>
-                    <div class="${"text svelte-1nxew9h"}"><h4 class="${"svelte-1nxew9h"}">${escape(planet[content].content)}</h4>
-                        <a${add_attribute("href", planet[content].source, 0)} class="${"svelte-1nxew9h"}"><span class="${"svelte-1nxew9h"}">Source:</span> Wikipedia
-                            <img src="${"./assets/icon-source.svg"}" alt="${"icon"}" class="${"svelte-1nxew9h"}"></a></div></div>
-                <div class="${"btns svelte-1nxew9h"}">${each(details, (detail) => `${validate_component(Button, "Button").$$render($$result, {
+            <div class="${"information svelte-1ct4qlr"}"><div class="${"planet-info"}"><h1 class="${"svelte-1ct4qlr"}">${escape(planet.name)}</h1>
+                    <div class="${"text svelte-1ct4qlr"}"><h4 class="${"svelte-1ct4qlr"}">${escape(planet[content].content)}</h4>
+                        <a${add_attribute("href", planet[content].source, 0)} class="${"svelte-1ct4qlr"}"><span class="${"svelte-1ct4qlr"}">Source:</span> Wikipedia
+                            <img src="${"./assets/icon-source.svg"}" alt="${"icon"}" class="${"svelte-1ct4qlr"}"></a></div></div>
+                <div class="${"btns svelte-1ct4qlr"}">${each(details, (detail) => `${validate_component(Button, "Button").$$render($$result, {
             active: content === detail.content,
             text: detail.content
           }, {}, {})}`)}</div></div></div>
-        <div class="${"cards svelte-1nxew9h"}">${validate_component(Card, "Card").$$render($$result, {
+        <div class="${"cards svelte-1ct4qlr"}">${validate_component(Card, "Card").$$render($$result, {
             title: "Rotation Time",
             value: planet.rotation
           }, {}, {})}
@@ -5010,7 +5010,7 @@ var init_index_15cc4f55 = __esm({
   }
 });
 
-// .svelte-kit/output/server/chunks/app-c5723c4b.js
+// .svelte-kit/output/server/chunks/app-de19722e.js
 function get_single_valued_header(headers, key) {
   const value = headers[key];
   if (Array.isArray(value)) {
@@ -6316,9 +6316,9 @@ function init(settings = default_settings) {
     amp: false,
     dev: false,
     entry: {
-      file: assets + "/_app/start-0902af5a.js",
+      file: assets + "/_app/start-a6981518.js",
       css: [assets + "/_app/assets/start-61d1577b.css"],
-      js: [assets + "/_app/start-0902af5a.js", assets + "/_app/chunks/vendor-93a687af.js"]
+      js: [assets + "/_app/start-a6981518.js", assets + "/_app/chunks/vendor-93a687af.js"]
     },
     fetched: void 0,
     floc: false,
@@ -6362,8 +6362,8 @@ function render(request, {
   return respond({ ...request, host }, options, { prerender });
 }
 var __accessCheck, __privateGet, __privateAdd, __privateSet, _map, absolute, scheme, chars, unsafeChars, reserved, escaped$1, objectProtoOwnPropertyNames, subscriber_queue2, escape_json_string_in_html_dict, escape_html_attr_dict, s$1, s, ReadOnlyFormData, current_component, escaped, missing_component, on_destroy, css3, Root, base, assets, user_hooks, template, options, default_settings, empty, manifest, get_hooks, module_lookup, metadata_lookup;
-var init_app_c5723c4b = __esm({
-  ".svelte-kit/output/server/chunks/app-c5723c4b.js"() {
+var init_app_de19722e = __esm({
+  ".svelte-kit/output/server/chunks/app-de19722e.js"() {
     init_shims();
     __accessCheck = (obj, member, msg) => {
       if (!member.has(obj))
@@ -6551,11 +6551,11 @@ ${``}`;
       externalFetch: hooks.externalFetch || fetch
     });
     module_lookup = {
-      "src/routes/__layout.svelte": () => Promise.resolve().then(() => (init_layout_29e7e66f(), layout_29e7e66f_exports)),
-      ".svelte-kit/build/components/error.svelte": () => Promise.resolve().then(() => (init_error_cad1df51(), error_cad1df51_exports)),
-      "src/routes/index.svelte": () => Promise.resolve().then(() => (init_index_15cc4f55(), index_15cc4f55_exports))
+      "src/routes/__layout.svelte": () => Promise.resolve().then(() => (init_layout_2c41b095(), layout_2c41b095_exports)),
+      ".svelte-kit/build/components/error.svelte": () => Promise.resolve().then(() => (init_error_60788dba(), error_60788dba_exports)),
+      "src/routes/index.svelte": () => Promise.resolve().then(() => (init_index_9a3025fa(), index_9a3025fa_exports))
     };
-    metadata_lookup = { "src/routes/__layout.svelte": { "entry": "pages/__layout.svelte-38f9c88d.js", "css": ["assets/pages/__layout.svelte-d15a6e0a.css", "assets/globalStore-56864501.css"], "js": ["pages/__layout.svelte-38f9c88d.js", "chunks/vendor-93a687af.js", "chunks/globalStore-a9919363.js"], "styles": [] }, ".svelte-kit/build/components/error.svelte": { "entry": "error.svelte-d2a5d6e0.js", "css": [], "js": ["error.svelte-d2a5d6e0.js", "chunks/vendor-93a687af.js"], "styles": [] }, "src/routes/index.svelte": { "entry": "pages/index.svelte-c298bacf.js", "css": ["assets/pages/index.svelte-1aecb8a8.css", "assets/globalStore-56864501.css"], "js": ["pages/index.svelte-c298bacf.js", "chunks/vendor-93a687af.js", "chunks/globalStore-a9919363.js"], "styles": [] } };
+    metadata_lookup = { "src/routes/__layout.svelte": { "entry": "pages/__layout.svelte-38f9c88d.js", "css": ["assets/pages/__layout.svelte-d15a6e0a.css", "assets/globalStore-56864501.css"], "js": ["pages/__layout.svelte-38f9c88d.js", "chunks/vendor-93a687af.js", "chunks/globalStore-a9919363.js"], "styles": [] }, ".svelte-kit/build/components/error.svelte": { "entry": "error.svelte-d2a5d6e0.js", "css": [], "js": ["error.svelte-d2a5d6e0.js", "chunks/vendor-93a687af.js"], "styles": [] }, "src/routes/index.svelte": { "entry": "pages/index.svelte-a1cf502b.js", "css": ["assets/pages/index.svelte-6e7593b4.css", "assets/globalStore-56864501.css"], "js": ["pages/index.svelte-a1cf502b.js", "chunks/vendor-93a687af.js", "chunks/globalStore-a9919363.js"], "styles": [] } };
   }
 });
 
@@ -6567,7 +6567,7 @@ init_shims();
 
 // .svelte-kit/output/server/app.js
 init_shims();
-init_app_c5723c4b();
+init_app_de19722e();
 
 // .svelte-kit/netlify/entry.js
 init();
