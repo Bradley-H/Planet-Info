@@ -1,9 +1,10 @@
-<script>
-    import { getData } from "../../stores/functionStore";
+<script lang="ts">
+    // STORES //
     import { globalStore } from "../../stores/globalStore";
-
-    
-function ToggleActive(){
+    // CONSTANTS //
+    import {planets} from '../../constants/planets'
+    // FUNCTIONS //
+function ToggleActive(): void{
     $globalStore.ModalActive = !$globalStore.ModalActive
 
     if ($globalStore.ModalActive) {
@@ -83,9 +84,7 @@ function ToggleActive(){
             <h2>THE PLANETS</h2>
         </div>
         <div class="modal-body">
-            {#await getData()}
                 <p />
-            {:then planets}
                 {#each planets as planet}
                     <button
                         class={planet.name}
@@ -94,7 +93,6 @@ function ToggleActive(){
                         {planet.name}
                     </button>
                 {/each}
-            {/await}
         </div>
     </div>
 </aside>

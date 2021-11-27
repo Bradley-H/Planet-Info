@@ -1,8 +1,8 @@
-<script>
+<script lang="ts">
     import { globalStore } from "../../stores/globalStore";
     import Modal from "./Modal.svelte";
 
-    function active(){
+    function active(): void{
         $globalStore.ModalActive = !$globalStore.ModalActive
 
         if($globalStore.ModalActive){

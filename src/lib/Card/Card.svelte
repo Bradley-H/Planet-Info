@@ -1,6 +1,6 @@
-<script>
-    export let title = "";
-    export let value = "";
+<script lang="ts">
+    export let title: string = "";
+    export let value: string = "";
     import "../../sass/styles.scss";
     import {fly} from 'svelte/transition'
 </script>

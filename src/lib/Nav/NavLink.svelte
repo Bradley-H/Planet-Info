@@ -1,10 +1,12 @@
 <script lang="ts">
+    // STORES //
 import { globalStore } from "../../stores/globalStore";
-
+    // PROPS //
     export let text;
-    import "../../sass/styles.scss";
-
+    // REACTIVE VALUES //
     $: path = $globalStore.currentPlanet; //shorten the markup to GlobalStore //
+    // MISC //
+    import "../../sass/styles.scss";
 </script>
 
 <style lang="scss">
@@ -79,4 +81,7 @@ import { globalStore } from "../../stores/globalStore";
     }}
 </style>
 
-<button on:click={() => $globalStore.currentPlanet = text} class={text} class:nonActive={path !== text} class:active={path === text}>{text}</button>
+<button on:click={() => $globalStore.currentPlanet = text} 
+        class={text} class:nonActive={path !== text} 
+        class:active={path === text}>
+        {text}</button>
