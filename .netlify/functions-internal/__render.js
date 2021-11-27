@@ -4696,7 +4696,7 @@ var init_shims = __esm({
   }
 });
 
-// .svelte-kit/output/server/chunks/functionStore-ca0e7f04.js
+// .svelte-kit/output/server/chunks/functionStore-05467e15.js
 function writable(value, start = noop) {
   let stop;
   const subscribers = new Set();
@@ -4751,10 +4751,10 @@ async function getData(path) {
   }
 }
 var subscriber_queue, globalStore;
-var init_functionStore_ca0e7f04 = __esm({
-  ".svelte-kit/output/server/chunks/functionStore-ca0e7f04.js"() {
+var init_functionStore_05467e15 = __esm({
+  ".svelte-kit/output/server/chunks/functionStore-05467e15.js"() {
     init_shims();
-    init_app_a1372007();
+    init_app_9a689e03();
     subscriber_queue = [];
     globalStore = writable({
       currentPlanet: "Earth",
@@ -4764,17 +4764,17 @@ var init_functionStore_ca0e7f04 = __esm({
   }
 });
 
-// .svelte-kit/output/server/chunks/__layout-ce9e1ba8.js
-var layout_ce9e1ba8_exports = {};
-__export(layout_ce9e1ba8_exports, {
+// .svelte-kit/output/server/chunks/__layout-a70332a9.js
+var layout_a70332a9_exports = {};
+__export(layout_a70332a9_exports, {
   default: () => _layout
 });
 var css$4, NavLink, css$3, Modal, css$2, Burger, css$1, Nav, css, _layout;
-var init_layout_ce9e1ba8 = __esm({
-  ".svelte-kit/output/server/chunks/__layout-ce9e1ba8.js"() {
+var init_layout_a70332a9 = __esm({
+  ".svelte-kit/output/server/chunks/__layout-a70332a9.js"() {
     init_shims();
-    init_app_a1372007();
-    init_functionStore_ca0e7f04();
+    init_app_9a689e03();
+    init_functionStore_05467e15();
     css$4 = {
       code: 'button.Neptune.active.svelte-fmzi8b::after,button.Neptune.nonActive.svelte-fmzi8b::after,button.Uranus.active.svelte-fmzi8b::after,button.Uranus.nonActive.svelte-fmzi8b::after,button.Saturn.active.svelte-fmzi8b::after,button.Saturn.nonActive.svelte-fmzi8b::after,button.Jupiter.active.svelte-fmzi8b::after,button.Jupiter.nonActive.svelte-fmzi8b::after,button.Mars.active.svelte-fmzi8b::after,button.Mars.nonActive.svelte-fmzi8b::after,button.Earth.active.svelte-fmzi8b::after,button.Earth.nonActive.svelte-fmzi8b::after,button.Venus.active.svelte-fmzi8b::after,button.Venus.nonActive.svelte-fmzi8b::after,button.Mercury.active.svelte-fmzi8b::after,button.Mercury.nonActive.svelte-fmzi8b::after{content:"";position:absolute;left:0;height:4px;transition:all 0.8s ease-in-out}button.Neptune.active.svelte-fmzi8b::after,button.Neptune.nonActive.svelte-fmzi8b::after,button.Uranus.active.svelte-fmzi8b::after,button.Uranus.nonActive.svelte-fmzi8b::after,button.Saturn.active.svelte-fmzi8b::after,button.Saturn.nonActive.svelte-fmzi8b::after,button.Jupiter.active.svelte-fmzi8b::after,button.Jupiter.nonActive.svelte-fmzi8b::after,button.Mars.active.svelte-fmzi8b::after,button.Mars.nonActive.svelte-fmzi8b::after,button.Earth.active.svelte-fmzi8b::after,button.Earth.nonActive.svelte-fmzi8b::after,button.Venus.active.svelte-fmzi8b::after,button.Venus.nonActive.svelte-fmzi8b::after,button.Mercury.active.svelte-fmzi8b::after,button.Mercury.nonActive.svelte-fmzi8b::after{width:100%}button.Neptune.active.svelte-fmzi8b::after,button.Uranus.active.svelte-fmzi8b::after,button.Saturn.active.svelte-fmzi8b::after,button.Jupiter.active.svelte-fmzi8b::after,button.Mars.active.svelte-fmzi8b::after,button.Earth.active.svelte-fmzi8b::after,button.Venus.active.svelte-fmzi8b::after,button.Mercury.active.svelte-fmzi8b::after{bottom:-0.5rem}button.Neptune.nonActive.svelte-fmzi8b::after,button.Uranus.nonActive.svelte-fmzi8b::after,button.Saturn.nonActive.svelte-fmzi8b::after,button.Jupiter.nonActive.svelte-fmzi8b::after,button.Mars.nonActive.svelte-fmzi8b::after,button.Earth.nonActive.svelte-fmzi8b::after,button.Venus.nonActive.svelte-fmzi8b::after,button.Mercury.nonActive.svelte-fmzi8b::after{bottom:-3.5rem}button.svelte-fmzi8b{color:#838391;background-color:transparent;border:none;cursor:pointer;margin-right:0.8125rem;text-decoration:none;font-weight:bold;margin-bottom:0.5rem;transition:all 0.8s ease-in-out;position:relative}@media(min-width: 768px) and (max-width: 991px){button.svelte-fmzi8b{font-size:0.79rem}}@media(min-width: 992px){button.svelte-fmzi8b{margin-right:2.25rem;font-size:0.85rem}}button.Mercury.svelte-fmzi8b:hover,button.Mercury.active.svelte-fmzi8b{color:#419db9}button.Mercury.active.svelte-fmzi8b::after,button.Mercury.nonActive.svelte-fmzi8b::after{background:#419db9}button.Venus.svelte-fmzi8b:hover,button.Venus.active.svelte-fmzi8b{color:#eda44a}button.Venus.active.svelte-fmzi8b::after,button.Venus.nonActive.svelte-fmzi8b::after{background:#eda44a}button.Earth.svelte-fmzi8b:hover,button.Earth.active.svelte-fmzi8b{color:#6f2ed6}button.Earth.active.svelte-fmzi8b::after,button.Earth.nonActive.svelte-fmzi8b::after{background:#6f2ed6}button.Mars.svelte-fmzi8b:hover,button.Mars.active.svelte-fmzi8b{color:#d15533}button.Mars.active.svelte-fmzi8b::after,button.Mars.nonActive.svelte-fmzi8b::after{background:#d15533}button.Jupiter.svelte-fmzi8b:hover,button.Jupiter.active.svelte-fmzi8b{color:#d93b36}button.Jupiter.active.svelte-fmzi8b::after,button.Jupiter.nonActive.svelte-fmzi8b::after{background:#d93b36}button.Saturn.svelte-fmzi8b:hover,button.Saturn.active.svelte-fmzi8b{color:#cb5020}button.Saturn.active.svelte-fmzi8b::after,button.Saturn.nonActive.svelte-fmzi8b::after{background:#cb5020}button.Uranus.svelte-fmzi8b:hover,button.Uranus.active.svelte-fmzi8b{color:#1ec2a4}button.Uranus.active.svelte-fmzi8b::after,button.Uranus.nonActive.svelte-fmzi8b::after{background:#1ec2a4}button.Neptune.svelte-fmzi8b:hover,button.Neptune.active.svelte-fmzi8b{color:#2d68f0}button.Neptune.active.svelte-fmzi8b::after,button.Neptune.nonActive.svelte-fmzi8b::after{background:#2d68f0}@keyframes svelte-fmzi8b-NavLinkActiveAnimation{from{bottom:-2.5rem}to{bottom:-1rem}}@keyframes svelte-fmzi8b-NavLinkActiveAnimationReverse{from{bottom:-0.5rem;opacity:1}to{bottom:-5.5rem;opacity:0}}',
       map: null
@@ -4795,7 +4795,7 @@ var init_layout_ce9e1ba8 = __esm({
       ].join(" ").trim()}">${escape(text)}</button>`;
     });
     css$3 = {
-      code: '.modal.svelte-97wfkv button.Neptune.svelte-97wfkv::after,.modal.svelte-97wfkv button.Uranus.svelte-97wfkv::after,.modal.svelte-97wfkv button.Saturn.svelte-97wfkv::after,.modal.svelte-97wfkv button.Jupiter.svelte-97wfkv::after,.modal.svelte-97wfkv button.Mars.svelte-97wfkv::after,.modal.svelte-97wfkv button.Earth.svelte-97wfkv::after,.modal.svelte-97wfkv button.Venus.svelte-97wfkv::after,.modal.svelte-97wfkv button.Mercury.svelte-97wfkv::after{content:"";width:1.375rem;height:1.375rem;border-radius:50%;position:absolute;left:-0.1rem;top:1px;text-align:flex-start;margin-left:-0.5rem}.modal.svelte-97wfkv.svelte-97wfkv{display:flex;position:fixed;inset:0;min-width:110%;height:100vh;background:#080826;box-shadow:0 0 10px rgba(0, 0, 0, 0.1);justify-content:center;transform:translateX(-100%);transition:all 0.8s ease-in-out;z-index:11}.modal.active.svelte-97wfkv.svelte-97wfkv{transform:translateX(0%)}.modal-header.svelte-97wfkv.svelte-97wfkv{margin-bottom:1rem}.modal-body.svelte-97wfkv.svelte-97wfkv{display:flex;justify-content:center;align-items:center;flex-direction:column;margin-top:1.75rem}.modal-content.svelte-97wfkv.svelte-97wfkv{margin-top:2.5rem}.modal.svelte-97wfkv button.svelte-97wfkv{margin-bottom:4.125rem;text-decoration:none;color:#838391;font-weight:bold;font-family:"Antonio", sans-serif;position:relative;cursor:pointer;font-size:1rem;width:100%}.modal.svelte-97wfkv button.svelte-97wfkv:last-of-type{margin-bottom:4rem}@media(min-width: 768px) and (max-width: 991px){.modal.svelte-97wfkv button.svelte-97wfkv{font-size:1.3rem}}.modal.svelte-97wfkv button.Mercury.svelte-97wfkv::after{background-color:#419db9}@media(min-width: 768px) and (max-width: 991px){.modal.svelte-97wfkv button.Mercury.svelte-97wfkv::after{left:-0.2rem;top:4px}}.modal.svelte-97wfkv button.Mercury.active.svelte-97wfkv{color:#419db9}.modal.svelte-97wfkv button.Venus.svelte-97wfkv::after{background-color:#eda44a}@media(min-width: 768px) and (max-width: 991px){.modal.svelte-97wfkv button.Venus.svelte-97wfkv::after{left:-0.2rem;top:4px}}.modal.svelte-97wfkv button.Venus.active.svelte-97wfkv{color:#eda44a}.modal.svelte-97wfkv button.Earth.svelte-97wfkv::after{background-color:#6f2ed6}@media(min-width: 768px) and (max-width: 991px){.modal.svelte-97wfkv button.Earth.svelte-97wfkv::after{left:-0.2rem;top:4px}}.modal.svelte-97wfkv button.Earth.active.svelte-97wfkv{color:#6f2ed6}.modal.svelte-97wfkv button.Mars.svelte-97wfkv::after{background-color:#d15533}@media(min-width: 768px) and (max-width: 991px){.modal.svelte-97wfkv button.Mars.svelte-97wfkv::after{left:-0.2rem;top:4px}}.modal.svelte-97wfkv button.Mars.active.svelte-97wfkv{color:#d15533}.modal.svelte-97wfkv button.Jupiter.svelte-97wfkv::after{background-color:#d93b36}@media(min-width: 768px) and (max-width: 991px){.modal.svelte-97wfkv button.Jupiter.svelte-97wfkv::after{left:-0.2rem;top:4px}}.modal.svelte-97wfkv button.Jupiter.active.svelte-97wfkv{color:#d93b36}.modal.svelte-97wfkv button.Saturn.svelte-97wfkv::after{background-color:#cb5020}@media(min-width: 768px) and (max-width: 991px){.modal.svelte-97wfkv button.Saturn.svelte-97wfkv::after{left:-0.2rem;top:4px}}.modal.svelte-97wfkv button.Saturn.active.svelte-97wfkv{color:#cb5020}.modal.svelte-97wfkv button.Uranus.svelte-97wfkv::after{background-color:#1ec2a4}@media(min-width: 768px) and (max-width: 991px){.modal.svelte-97wfkv button.Uranus.svelte-97wfkv::after{left:-0.2rem;top:4px}}.modal.svelte-97wfkv button.Uranus.active.svelte-97wfkv{color:#1ec2a4}.modal.svelte-97wfkv button.Neptune.svelte-97wfkv::after{background-color:#2d68f0}@media(min-width: 768px) and (max-width: 991px){.modal.svelte-97wfkv button.Neptune.svelte-97wfkv::after{left:-0.2rem;top:4px}}.modal.svelte-97wfkv button.Neptune.active.svelte-97wfkv{color:#2d68f0}',
+      code: '.modal.svelte-1k7nzww button.Neptune.svelte-1k7nzww::after,.modal.svelte-1k7nzww button.Uranus.svelte-1k7nzww::after,.modal.svelte-1k7nzww button.Saturn.svelte-1k7nzww::after,.modal.svelte-1k7nzww button.Jupiter.svelte-1k7nzww::after,.modal.svelte-1k7nzww button.Mars.svelte-1k7nzww::after,.modal.svelte-1k7nzww button.Earth.svelte-1k7nzww::after,.modal.svelte-1k7nzww button.Venus.svelte-1k7nzww::after,.modal.svelte-1k7nzww button.Mercury.svelte-1k7nzww::after{content:"";width:1.375rem;height:1.375rem;border-radius:50%;position:absolute;left:-0.1rem;top:1px;text-align:flex-start;margin-left:-0.5rem}.modal.svelte-1k7nzww.svelte-1k7nzww{display:flex;position:fixed;inset:0;min-width:110%;height:100vh;background:#080826;box-shadow:0 0 10px rgba(0, 0, 0, 0.1);justify-content:center;transform:translateX(-100%);transition:all 0.8s ease-in-out;z-index:11}.modal.active.svelte-1k7nzww.svelte-1k7nzww{transform:translateX(0%)}.modal-body.svelte-1k7nzww.svelte-1k7nzww{display:flex;justify-content:center;align-items:center;flex-direction:column;margin-top:1.75rem}.modal-content.svelte-1k7nzww.svelte-1k7nzww{margin-top:1.5rem}.modal.svelte-1k7nzww button.svelte-1k7nzww{margin-bottom:3.4375rem;text-decoration:none;color:#838391;font-weight:bold;font-family:"Antonio", sans-serif;position:relative;cursor:pointer;font-size:1rem;width:100%}.modal.svelte-1k7nzww button.svelte-1k7nzww:last-of-type{margin-bottom:1rem}@media(min-width: 768px) and (max-width: 991px){.modal.svelte-1k7nzww button.svelte-1k7nzww{font-size:1.3rem}}.modal.svelte-1k7nzww button.Mercury.svelte-1k7nzww::after{background-color:#419db9}@media(min-width: 768px) and (max-width: 991px){.modal.svelte-1k7nzww button.Mercury.svelte-1k7nzww::after{left:0.3rem;top:3px}}.modal.svelte-1k7nzww button.Mercury.active.svelte-1k7nzww{color:#419db9}.modal.svelte-1k7nzww button.Venus.svelte-1k7nzww::after{background-color:#eda44a}@media(min-width: 768px) and (max-width: 991px){.modal.svelte-1k7nzww button.Venus.svelte-1k7nzww::after{left:0.3rem;top:3px}}.modal.svelte-1k7nzww button.Venus.active.svelte-1k7nzww{color:#eda44a}.modal.svelte-1k7nzww button.Earth.svelte-1k7nzww::after{background-color:#6f2ed6}@media(min-width: 768px) and (max-width: 991px){.modal.svelte-1k7nzww button.Earth.svelte-1k7nzww::after{left:0.3rem;top:3px}}.modal.svelte-1k7nzww button.Earth.active.svelte-1k7nzww{color:#6f2ed6}.modal.svelte-1k7nzww button.Mars.svelte-1k7nzww::after{background-color:#d15533}@media(min-width: 768px) and (max-width: 991px){.modal.svelte-1k7nzww button.Mars.svelte-1k7nzww::after{left:0.3rem;top:3px}}.modal.svelte-1k7nzww button.Mars.active.svelte-1k7nzww{color:#d15533}.modal.svelte-1k7nzww button.Jupiter.svelte-1k7nzww::after{background-color:#d93b36}@media(min-width: 768px) and (max-width: 991px){.modal.svelte-1k7nzww button.Jupiter.svelte-1k7nzww::after{left:0.3rem;top:3px}}.modal.svelte-1k7nzww button.Jupiter.active.svelte-1k7nzww{color:#d93b36}.modal.svelte-1k7nzww button.Saturn.svelte-1k7nzww::after{background-color:#cb5020}@media(min-width: 768px) and (max-width: 991px){.modal.svelte-1k7nzww button.Saturn.svelte-1k7nzww::after{left:0.3rem;top:3px}}.modal.svelte-1k7nzww button.Saturn.active.svelte-1k7nzww{color:#cb5020}.modal.svelte-1k7nzww button.Uranus.svelte-1k7nzww::after{background-color:#1ec2a4}@media(min-width: 768px) and (max-width: 991px){.modal.svelte-1k7nzww button.Uranus.svelte-1k7nzww::after{left:0.3rem;top:3px}}.modal.svelte-1k7nzww button.Uranus.active.svelte-1k7nzww{color:#1ec2a4}.modal.svelte-1k7nzww button.Neptune.svelte-1k7nzww::after{background-color:#2d68f0}@media(min-width: 768px) and (max-width: 991px){.modal.svelte-1k7nzww button.Neptune.svelte-1k7nzww::after{left:0.3rem;top:3px}}.modal.svelte-1k7nzww button.Neptune.active.svelte-1k7nzww{color:#2d68f0}',
       map: null
     };
     Modal = create_ssr_component(($$result, $$props, $$bindings, slots) => {
@@ -4803,8 +4803,8 @@ var init_layout_ce9e1ba8 = __esm({
       $$unsubscribe_globalStore = subscribe(globalStore, (value) => $globalStore = value);
       $$result.css.add(css$3);
       $$unsubscribe_globalStore();
-      return `<aside class="${["modal svelte-97wfkv", $globalStore.ModalActive ? "active" : ""].join(" ").trim()}"><div class="${"modal-content svelte-97wfkv"}"><div class="${"modal-header svelte-97wfkv"}"><h2>THE PLANETS</h2></div>
-        <div class="${"modal-body svelte-97wfkv"}">${function(__value) {
+      return `<aside class="${["modal svelte-1k7nzww", $globalStore.ModalActive ? "active" : ""].join(" ").trim()}"><div class="${"modal-content svelte-1k7nzww"}"><div class="${"modal-header"}"><h2>THE PLANETS</h2></div>
+        <div class="${"modal-body svelte-1k7nzww"}">${function(__value) {
         if (is_promise(__value)) {
           __value.then(null, noop);
           return `
@@ -4813,14 +4813,14 @@ var init_layout_ce9e1ba8 = __esm({
         }
         return function(planets) {
           return `
-                ${each(planets, (planet) => `<button class="${escape(null_to_empty(planet.name)) + " svelte-97wfkv"}">${escape(planet.name)}
+                ${each(planets, (planet) => `<button class="${escape(null_to_empty(planet.name)) + " svelte-1k7nzww"}">${escape(planet.name)}
                     </button>`)}
             `;
         }(__value);
       }(getData())}</div></div></aside>`;
     });
     css$2 = {
-      code: ".burger.svelte-1r1ag2u.svelte-1r1ag2u,.line.svelte-1r1ag2u.svelte-1r1ag2u{transition:all 0.8s ease-in-out;width:2.125rem}.burger.svelte-1r1ag2u.svelte-1r1ag2u{display:flex;flex-direction:column;height:auto;cursor:pointer;z-index:12;margin:0.2rem 1rem 0 auto}@media(min-width: 768px){.burger.svelte-1r1ag2u.svelte-1r1ag2u{display:none;margin:0}}.burger.active.svelte-1r1ag2u.svelte-1r1ag2u{transform:rotate(360deg) translateX(10px) translateY(1rem)}.burger.active.svelte-1r1ag2u .line.svelte-1r1ag2u:nth-of-type(3){opacity:0}.burger.active.svelte-1r1ag2u .line.svelte-1r1ag2u:nth-of-type(2){transform:rotate(45deg) translateX(-9px)}.burger.active.svelte-1r1ag2u .line.svelte-1r1ag2u:nth-of-type(1){transform:rotate(-45deg) translateX(-9px)}.line.svelte-1r1ag2u.svelte-1r1ag2u{height:6px;background-color:#838391;margin-top:7px}",
+      code: ".burger.svelte-5nskmd.svelte-5nskmd,.line.svelte-5nskmd.svelte-5nskmd{transition:all 0.8s ease-in-out;width:2.125rem}.burger.svelte-5nskmd.svelte-5nskmd{display:flex;flex-direction:column;height:auto;cursor:pointer;z-index:12;margin:0.1875rem 1.0625rem 0 auto}@media(min-width: 768px){.burger.svelte-5nskmd.svelte-5nskmd{display:none;margin:0}}.burger.active.svelte-5nskmd.svelte-5nskmd{transform:rotate(360deg) translateX(10px) translateY(0.15rem)}.burger.active.svelte-5nskmd .line.svelte-5nskmd:nth-of-type(3){opacity:0}.burger.active.svelte-5nskmd .line.svelte-5nskmd:nth-of-type(2){transform:rotate(45deg) translateX(-9px)}.burger.active.svelte-5nskmd .line.svelte-5nskmd:nth-of-type(1){transform:rotate(-45deg) translateX(-9px)}.line.svelte-5nskmd.svelte-5nskmd{height:6px;background-color:#838391;margin-top:7px}",
       map: null
     };
     Burger = create_ssr_component(($$result, $$props, $$bindings, slots) => {
@@ -4828,9 +4828,9 @@ var init_layout_ce9e1ba8 = __esm({
       $$unsubscribe_globalStore = subscribe(globalStore, (value) => $globalStore = value);
       $$result.css.add(css$2);
       $$unsubscribe_globalStore();
-      return `<div class="${["burger svelte-1r1ag2u", $globalStore.ModalActive ? "active" : ""].join(" ").trim()}"><div class="${"line svelte-1r1ag2u"}"></div>
-    <div class="${"line svelte-1r1ag2u"}"></div>
-    <div class="${"line svelte-1r1ag2u"}"></div></div>
+      return `<div class="${["burger svelte-5nskmd", $globalStore.ModalActive ? "active" : ""].join(" ").trim()}"><div class="${"line svelte-5nskmd"}"></div>
+    <div class="${"line svelte-5nskmd"}"></div>
+    <div class="${"line svelte-5nskmd"}"></div></div>
 
 ${validate_component(Modal, "Modal").$$render($$result, {}, {}, {})}`;
     });
@@ -4866,9 +4866,9 @@ ${validate_component(Modal, "Modal").$$render($$result, {}, {}, {})}`;
   }
 });
 
-// .svelte-kit/output/server/chunks/error-d03473eb.js
-var error_d03473eb_exports = {};
-__export(error_d03473eb_exports, {
+// .svelte-kit/output/server/chunks/error-1d79503a.js
+var error_1d79503a_exports = {};
+__export(error_1d79503a_exports, {
   default: () => Error2,
   load: () => load
 });
@@ -4876,10 +4876,10 @@ function load({ error: error2, status }) {
   return { props: { error: error2, status } };
 }
 var Error2;
-var init_error_d03473eb = __esm({
-  ".svelte-kit/output/server/chunks/error-d03473eb.js"() {
+var init_error_1d79503a = __esm({
+  ".svelte-kit/output/server/chunks/error-1d79503a.js"() {
     init_shims();
-    init_app_a1372007();
+    init_app_9a689e03();
     Error2 = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       let { status } = $$props;
       let { error: error2 } = $$props;
@@ -4899,17 +4899,17 @@ ${error2.stack ? `<pre>${escape(error2.stack)}</pre>` : ``}`;
   }
 });
 
-// .svelte-kit/output/server/chunks/index-c8c62cfb.js
-var index_c8c62cfb_exports = {};
-__export(index_c8c62cfb_exports, {
+// .svelte-kit/output/server/chunks/index-5a8cbfc0.js
+var index_5a8cbfc0_exports = {};
+__export(index_5a8cbfc0_exports, {
   default: () => Routes
 });
 var css$22, Button, css$12, Card, css2, Routes;
-var init_index_c8c62cfb = __esm({
-  ".svelte-kit/output/server/chunks/index-c8c62cfb.js"() {
+var init_index_5a8cbfc0 = __esm({
+  ".svelte-kit/output/server/chunks/index-5a8cbfc0.js"() {
     init_shims();
-    init_app_a1372007();
-    init_functionStore_ca0e7f04();
+    init_app_9a689e03();
+    init_functionStore_05467e15();
     css$22 = {
       code: "button.svelte-v840nv,a.svelte-v840nv{display:flex;justify-content:center;align-items:center;padding:1.2rem 3rem 1.2rem 0.5rem;width:14.5rem;color:white;font-size:1.1rem;border:1px solid #838391;transition:all 0.8s ease-in-out;text-decoration:none;min-width:155px;cursor:pointer;text-transform:capitalize;z-index:3;margin-top:0.875rem}@media(min-width: 768px) and (max-width: 991px){button.svelte-v840nv,a.svelte-v840nv{width:16rem}}@media(min-width: 992px){button.svelte-v840nv,a.svelte-v840nv{width:20rem}}button.svelte-v840nv:hover,a.svelte-v840nv:hover{background-color:#838391;color:white}button.Mercury.active.svelte-v840nv,a.Mercury.active.svelte-v840nv{background-color:#419db9}button.Venus.active.svelte-v840nv,a.Venus.active.svelte-v840nv{background-color:#eda44a}button.Earth.active.svelte-v840nv,a.Earth.active.svelte-v840nv{background-color:#6f2ed6}button.Mars.active.svelte-v840nv,a.Mars.active.svelte-v840nv{background-color:#d15533}button.Jupiter.active.svelte-v840nv,a.Jupiter.active.svelte-v840nv{background-color:#d93b36}button.Saturn.active.svelte-v840nv,a.Saturn.active.svelte-v840nv{background-color:#cb5020}button.Uranus.active.svelte-v840nv,a.Uranus.active.svelte-v840nv{background-color:#1ec2a4}button.Neptune.active.svelte-v840nv,a.Neptune.active.svelte-v840nv{background-color:#2d68f0}",
       map: null
@@ -5021,7 +5021,7 @@ var init_index_c8c62cfb = __esm({
   }
 });
 
-// .svelte-kit/output/server/chunks/app-a1372007.js
+// .svelte-kit/output/server/chunks/app-9a689e03.js
 function get_single_valued_header(headers, key) {
   const value = headers[key];
   if (Array.isArray(value)) {
@@ -6317,9 +6317,9 @@ function init(settings = default_settings) {
     amp: false,
     dev: false,
     entry: {
-      file: assets + "/_app/start-faab0711.js",
+      file: assets + "/_app/start-44b84f58.js",
       css: [assets + "/_app/assets/start-61d1577b.css"],
-      js: [assets + "/_app/start-faab0711.js", assets + "/_app/chunks/vendor-7d8c5d63.js"]
+      js: [assets + "/_app/start-44b84f58.js", assets + "/_app/chunks/vendor-7d8c5d63.js"]
     },
     fetched: void 0,
     floc: false,
@@ -6363,8 +6363,8 @@ function render(request, {
   return respond({ ...request, host }, options, { prerender });
 }
 var __accessCheck, __privateGet, __privateAdd, __privateSet, _map, chars, unsafeChars, reserved, escaped$1, objectProtoOwnPropertyNames, subscriber_queue2, escape_json_string_in_html_dict, escape_html_attr_dict, s$1, s, absolute, ReadOnlyFormData, current_component, escaped, missing_component, on_destroy, css3, Root, base, assets, user_hooks, template, options, default_settings, empty, manifest, get_hooks, module_lookup, metadata_lookup;
-var init_app_a1372007 = __esm({
-  ".svelte-kit/output/server/chunks/app-a1372007.js"() {
+var init_app_9a689e03 = __esm({
+  ".svelte-kit/output/server/chunks/app-9a689e03.js"() {
     init_shims();
     __accessCheck = (obj, member, msg) => {
       if (!member.has(obj))
@@ -6526,12 +6526,12 @@ ${``}`;
       __proto__: null,
       [Symbol.toStringTag]: "Module"
     });
-    template = ({ head, body }) => '<!DOCTYPE html>\n<html lang="en">\n\n<head>\n	<meta charset="utf-8" />\n	<link rel="icon" href="/favicon.png" />\n	<meta name="viewport" content="width=device-width, initial-scale=1" />\n	<link rel="preconnect" href="https://fonts.googleapis.com">\n	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>\n	<link href="https://fonts.googleapis.com/css2?family=Antonio:wght@100;300;500&family=Spartan:wght@300;600&display=swap" rel="stylesheet">\n	' + head + '\n</head>\n\n<body>\n	<div id="svelte">' + body + "</div>\n</body>\n\n</html>";
+    template = ({ head, body }) => '<!DOCTYPE html>\n<html lang="en">\n\n<head>\n	<meta charset="utf-8" />\n	<link rel="icon" href="/favicon.ico" />\n	<meta name="viewport" content="width=device-width, initial-scale=1" />\n	<link rel="preconnect" href="https://fonts.googleapis.com">\n	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>\n	<link href="https://fonts.googleapis.com/css2?family=Antonio:wght@100;300;500&family=Spartan:wght@300;600&display=swap" rel="stylesheet">\n	' + head + '\n</head>\n\n<body>\n	<div id="svelte">' + body + "</div>\n</body>\n\n</html>";
     options = null;
     default_settings = { paths: { "base": "", "assets": "" } };
     empty = () => ({});
     manifest = {
-      assets: [{ "file": "assets/background-stars.svg", "size": 6377, "type": "image/svg+xml" }, { "file": "assets/favicon-32x32.png", "size": 1063, "type": "image/png" }, { "file": "assets/geology-earth.png", "size": 34863, "type": "image/png" }, { "file": "assets/geology-jupiter.png", "size": 26685, "type": "image/png" }, { "file": "assets/geology-mars.png", "size": 43807, "type": "image/png" }, { "file": "assets/geology-mercury.png", "size": 49709, "type": "image/png" }, { "file": "assets/geology-neptune.png", "size": 31630, "type": "image/png" }, { "file": "assets/geology-saturn.png", "size": 30730, "type": "image/png" }, { "file": "assets/geology-uranus.png", "size": 24391, "type": "image/png" }, { "file": "assets/geology-venus.png", "size": 44183, "type": "image/png" }, { "file": "assets/icon-chevron.svg", "size": 130, "type": "image/svg+xml" }, { "file": "assets/icon-hamburger.svg", "size": 157, "type": "image/svg+xml" }, { "file": "assets/icon-source.svg", "size": 629, "type": "image/svg+xml" }, { "file": "assets/planet-earth-internal.svg", "size": 6624, "type": "image/svg+xml" }, { "file": "assets/planet-earth.svg", "size": 6169, "type": "image/svg+xml" }, { "file": "assets/planet-jupiter-internal.svg", "size": 6705, "type": "image/svg+xml" }, { "file": "assets/planet-jupiter.svg", "size": 5877, "type": "image/svg+xml" }, { "file": "assets/planet-mars-internal.svg", "size": 2905, "type": "image/svg+xml" }, { "file": "assets/planet-mars.svg", "size": 2460, "type": "image/svg+xml" }, { "file": "assets/planet-mercury-internal.svg", "size": 2085, "type": "image/svg+xml" }, { "file": "assets/planet-mercury.svg", "size": 1697, "type": "image/svg+xml" }, { "file": "assets/planet-neptune-internal.svg", "size": 4995, "type": "image/svg+xml" }, { "file": "assets/planet-neptune.svg", "size": 4575, "type": "image/svg+xml" }, { "file": "assets/planet-saturn-internal.svg", "size": 4335, "type": "image/svg+xml" }, { "file": "assets/planet-saturn.svg", "size": 3838, "type": "image/svg+xml" }, { "file": "assets/planet-uranus-internal.svg", "size": 5042, "type": "image/svg+xml" }, { "file": "assets/planet-uranus.svg", "size": 4582, "type": "image/svg+xml" }, { "file": "assets/planet-venus-internal.svg", "size": 3779, "type": "image/svg+xml" }, { "file": "assets/planet-venus.svg", "size": 3456, "type": "image/svg+xml" }, { "file": "favicon.png", "size": 1571, "type": "image/png" }, { "file": "json/data.json", "size": 11413, "type": "application/json" }],
+      assets: [{ "file": "assets/background-stars.svg", "size": 6377, "type": "image/svg+xml" }, { "file": "assets/favicon-32x32.png", "size": 1063, "type": "image/png" }, { "file": "assets/geology-earth.png", "size": 34863, "type": "image/png" }, { "file": "assets/geology-jupiter.png", "size": 26685, "type": "image/png" }, { "file": "assets/geology-mars.png", "size": 43807, "type": "image/png" }, { "file": "assets/geology-mercury.png", "size": 49709, "type": "image/png" }, { "file": "assets/geology-neptune.png", "size": 31630, "type": "image/png" }, { "file": "assets/geology-saturn.png", "size": 30730, "type": "image/png" }, { "file": "assets/geology-uranus.png", "size": 24391, "type": "image/png" }, { "file": "assets/geology-venus.png", "size": 44183, "type": "image/png" }, { "file": "assets/icon-chevron.svg", "size": 130, "type": "image/svg+xml" }, { "file": "assets/icon-hamburger.svg", "size": 157, "type": "image/svg+xml" }, { "file": "assets/icon-source.svg", "size": 629, "type": "image/svg+xml" }, { "file": "assets/planet-earth-internal.svg", "size": 6624, "type": "image/svg+xml" }, { "file": "assets/planet-earth.svg", "size": 6169, "type": "image/svg+xml" }, { "file": "assets/planet-jupiter-internal.svg", "size": 6705, "type": "image/svg+xml" }, { "file": "assets/planet-jupiter.svg", "size": 5877, "type": "image/svg+xml" }, { "file": "assets/planet-mars-internal.svg", "size": 2905, "type": "image/svg+xml" }, { "file": "assets/planet-mars.svg", "size": 2460, "type": "image/svg+xml" }, { "file": "assets/planet-mercury-internal.svg", "size": 2085, "type": "image/svg+xml" }, { "file": "assets/planet-mercury.svg", "size": 1697, "type": "image/svg+xml" }, { "file": "assets/planet-neptune-internal.svg", "size": 4995, "type": "image/svg+xml" }, { "file": "assets/planet-neptune.svg", "size": 4575, "type": "image/svg+xml" }, { "file": "assets/planet-saturn-internal.svg", "size": 4335, "type": "image/svg+xml" }, { "file": "assets/planet-saturn.svg", "size": 3838, "type": "image/svg+xml" }, { "file": "assets/planet-uranus-internal.svg", "size": 5042, "type": "image/svg+xml" }, { "file": "assets/planet-uranus.svg", "size": 4582, "type": "image/svg+xml" }, { "file": "assets/planet-venus-internal.svg", "size": 3779, "type": "image/svg+xml" }, { "file": "assets/planet-venus.svg", "size": 3456, "type": "image/svg+xml" }, { "file": "favicon.ico", "size": 161862, "type": "image/vnd.microsoft.icon" }, { "file": "json/data.json", "size": 11413, "type": "application/json" }],
       layout: "src/routes/__layout.svelte",
       error: ".svelte-kit/build/components/error.svelte",
       routes: [
@@ -6551,11 +6551,11 @@ ${``}`;
       externalFetch: hooks.externalFetch || fetch
     });
     module_lookup = {
-      "src/routes/__layout.svelte": () => Promise.resolve().then(() => (init_layout_ce9e1ba8(), layout_ce9e1ba8_exports)),
-      ".svelte-kit/build/components/error.svelte": () => Promise.resolve().then(() => (init_error_d03473eb(), error_d03473eb_exports)),
-      "src/routes/index.svelte": () => Promise.resolve().then(() => (init_index_c8c62cfb(), index_c8c62cfb_exports))
+      "src/routes/__layout.svelte": () => Promise.resolve().then(() => (init_layout_a70332a9(), layout_a70332a9_exports)),
+      ".svelte-kit/build/components/error.svelte": () => Promise.resolve().then(() => (init_error_1d79503a(), error_1d79503a_exports)),
+      "src/routes/index.svelte": () => Promise.resolve().then(() => (init_index_5a8cbfc0(), index_5a8cbfc0_exports))
     };
-    metadata_lookup = { "src/routes/__layout.svelte": { "entry": "pages/__layout.svelte-ac2fa48b.js", "css": ["assets/pages/__layout.svelte-a2ddef51.css", "assets/functionStore-13fef6ce.css"], "js": ["pages/__layout.svelte-ac2fa48b.js", "chunks/vendor-7d8c5d63.js", "chunks/functionStore-caaed2b5.js"], "styles": [] }, ".svelte-kit/build/components/error.svelte": { "entry": "error.svelte-ee653e8c.js", "css": [], "js": ["error.svelte-ee653e8c.js", "chunks/vendor-7d8c5d63.js"], "styles": [] }, "src/routes/index.svelte": { "entry": "pages/index.svelte-b7b80f09.js", "css": ["assets/pages/index.svelte-1aecb8a8.css", "assets/functionStore-13fef6ce.css"], "js": ["pages/index.svelte-b7b80f09.js", "chunks/vendor-7d8c5d63.js", "chunks/functionStore-caaed2b5.js"], "styles": [] } };
+    metadata_lookup = { "src/routes/__layout.svelte": { "entry": "pages/__layout.svelte-cd5df7cd.js", "css": ["assets/pages/__layout.svelte-d15a6e0a.css", "assets/functionStore-13fef6ce.css"], "js": ["pages/__layout.svelte-cd5df7cd.js", "chunks/vendor-7d8c5d63.js", "chunks/functionStore-caaed2b5.js"], "styles": [] }, ".svelte-kit/build/components/error.svelte": { "entry": "error.svelte-ee653e8c.js", "css": [], "js": ["error.svelte-ee653e8c.js", "chunks/vendor-7d8c5d63.js"], "styles": [] }, "src/routes/index.svelte": { "entry": "pages/index.svelte-ebf09892.js", "css": ["assets/pages/index.svelte-1aecb8a8.css", "assets/functionStore-13fef6ce.css"], "js": ["pages/index.svelte-ebf09892.js", "chunks/vendor-7d8c5d63.js", "chunks/functionStore-caaed2b5.js"], "styles": [] } };
   }
 });
 
@@ -6567,7 +6567,7 @@ init_shims();
 
 // .svelte-kit/output/server/app.js
 init_shims();
-init_app_a1372007();
+init_app_9a689e03();
 
 // .svelte-kit/netlify/entry.js
 init();
