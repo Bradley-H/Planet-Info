@@ -158,7 +158,7 @@
                 {:else}
                     <img src={planet.images.planet} alt={planet.name} />
                     <img
-                    in:fly={{ duration: 500, delay: 500, y: 100 }}
+                    in:fly={{ duration: 500, delay: 250, y: 100 }}
                         class="geology"
                         src={planet.images.geology}
                         alt={planet.name}
