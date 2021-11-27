@@ -27,14 +27,14 @@
         height: auto;
         cursor: pointer;
         z-index: 12;
-        margin: .2rem 1rem 0 auto;
+        margin: toRem(3) toRem(17) 0 auto;
         @include tabletUp{
             display: none;
             margin: 0;
         }
         // ACTIVE STATE // - burger is active when menu is open
         &.active {
-            transform: rotate(360deg) translateX(10px) translateY(1rem);
+            transform: rotate(360deg) translateX(10px) translateY(.15rem);
             .line:nth-of-type(3) {
                 opacity: 0;
             }

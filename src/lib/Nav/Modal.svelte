@@ -33,20 +33,17 @@ function ToggleActive(){
         &.active{
             transform: translateX(0%);
         }
-        &-header {
-            margin-bottom: 1rem;
-        }
         &-body {
             @include centered;
             flex-direction: column;
             margin-top: 1.75rem;
         }
         &-content{
-            margin-top: 2.5rem;
+            margin-top: 1.5rem;
         }
 
         button {
-            margin-bottom: toRem(66);
+            margin-bottom: toRem(55);
             text-decoration: none;
             color: $subHeading;
             font-weight: bold;
@@ -56,7 +53,7 @@ function ToggleActive(){
             font-size: 1rem;
             width: 100%;
             &:last-of-type {
-                margin-bottom: 4rem;
+                margin-bottom: 1rem;
             }
             @include tablet{
                 font-size: 1.3rem;
@@ -66,8 +63,8 @@ function ToggleActive(){
                    @extend %modal;
                    background-color: $color;
                     @include tablet{
-                        left: -.2rem;
-                        top: 4px;
+                        left: .3rem;
+                        top: 3px;
                     }
               }
                 &.#{$planet}.active{

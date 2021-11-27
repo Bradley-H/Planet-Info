@@ -150,17 +150,15 @@
     {#await getPlanetData(path)}
         <p />
     {:then planet}
-        <div class="planet">
+        <div class="planet" >
             <div
-                class="planetInfo"
-                in:fly={{ duration: 555, x: -350, delay: 800 }}
-            >
+                class="planetInfo" in:fly={{ duration: 1000, delay: 300, x: -300 }}>
                 {#if content !== "geology"}
                     <img src={planet.images[imageType]} alt={planet.name} />
                 {:else}
                     <img src={planet.images.planet} alt={planet.name} />
                     <img
-                        in:fly={{ duration: 1000, delay: 100, y: 100 }}
+                    in:fly={{ duration: 500, delay: 500, y: 100 }}
                         class="geology"
                         src={planet.images.geology}
                         alt={planet.name}
