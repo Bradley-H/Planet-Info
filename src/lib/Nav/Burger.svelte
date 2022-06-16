@@ -22,12 +22,12 @@
         width: toRem(34);
     }
     .burger {
-        display: flex;
+        @include centered;
         flex-direction: column;
         height: auto;
         cursor: pointer;
         z-index: 12;
-        margin: toRem(3) toRem(17) 0 auto;
+        margin: 0 toRem(17);
         @include tabletUp{
             display: none;
             margin: 0;

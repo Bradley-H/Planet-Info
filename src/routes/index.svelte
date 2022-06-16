@@ -1,10 +1,10 @@
 <script lang="ts">
     // SVELTE IMPORTS //
     import { fly, fade } from "svelte/transition";
-
     // COMPONENTS //
     import Button from "$lib/Button/Button.svelte";
     import Card from "$lib/Card/Card.svelte";
+    import Nav from "$lib/Nav/Nav.svelte";
     // STORES //
     import { globalStore } from "../stores/globalStore";
     import { getData } from "../stores/functionStore";
@@ -15,20 +15,10 @@
         { id: 1, content: "structure", image: "internal" },
         { id: 2, content: "geology" },
     ];
-
     // REACTIVE VALUES //
     $: path = $globalStore.currentPlanet; // shorten the markup
-    let content = "overview"; // What content to display //
-    let imageType = "planet"; // what image to display //
-    // FUNCTIONS //
-    function toggle(id: string) {
-        content = id;
-    }
-    async function getPlanetData(path) {
-        content = "overview";
-        imageType = "planet";
-        return getData(path);
-    }
+    $: content = "overview"; // What content to display about the planet //
+    $: imageType = "planet"; // what image to display //
 </script>
 
 <style lang="scss">
@@ -145,10 +135,11 @@
     }
 </style>
 
-
+<Nav/>
+<main>
 <section>
-    {#await getPlanetData(path)}
-        <p />
+    {#await getData(path)}
+    <p>Getting Planet Information, Please wait.....</p>
     {:then planet}
         <div class="planet" >
             <div
@@ -171,21 +162,17 @@
                     <h1 in:fade={{ delay: 1000 }}>{planet.name}</h1>
                     <div class="text" in:fade={{ delay: 1000 }}>
                         <h4>{planet[content].content}</h4>
-                        <a href={planet[content].source}
-                            ><span>Source:</span> Wikipedia
-                            <img src="./assets/icon-source.svg" alt="icon" /></a
-                        >
+                        <a href={planet[content].source}><span>Source:</span> Wikipedia
+                            <img src="./assets/icon-source.svg" alt="icon" /></a>
                     </div>
                 </div>
                 <div class="btns">
                     {#each details as detail (detail.id)}
                         <Button
-                            on:click={() =>
-                                toggle(detail.content.toLowerCase())}
+                            on:click={() => content = detail.content}
                             on:click={() => (imageType = detail.image)}
                             active={content === detail.content}
-                            text={detail.content}
-                        />
+                            text={detail.content}/>
                     {/each}
                 </div>
             </div>
@@ -198,3 +185,4 @@
         </div>
     {/await}
 </section>
+</main>
